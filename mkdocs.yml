@@ -1,11 +1,11 @@
 # Project information
 site_name: RingCentral Automator
-site_url: https://git.ringcentral.com/rc-labs/ringcentral-workflow
+site_url: https://github.com/ringcentral/ringcentral-automator-docs
 
 # Repository
-#repo_url: https://git.ringcentral.com/rc-labs/ringcentral-workflow
-#repo_name: rc-labs/ringcentral-workflow
-#edit_uri: tree/master/docs
+#repo_url: https://github.com/ringcentral/ringcentral-automator-docs
+#repo_name: ringcentral/ringcentral-automator-docs
+#edit_uri: tree/main/docs
 docs_dir: docs
 
 theme:
