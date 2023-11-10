@@ -21,4 +21,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
+      - run: pip install mdx-include
       - run: mkdocs gh-deploy --force
