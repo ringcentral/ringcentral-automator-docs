@@ -1,0 +1,35 @@
+<details id="lookup-contact">
+  <summary>Lookup contact</summary>
+
+Looks up a contact in your RingCentral address book, both your internal company directory, as well as your personal address book. 
+
+When combined with the "create contact" action, this is very helpful in creating customized responses based upon whether you have previously corresponded with an individual. It is also useful to be able to disambiguate between internal communications (does the person sending me an SMS have an entry within our internal company directory?) and external or customer communications. 
+
+**Input**
+
+* **Phone number**. Looks up a contact by phone number. 
+
+**Output**
+
+* **Contact exists**. "True" if the phone number was found in any address book, and "false" otherwise. 
+* **Is personal contact**. "True" if the phone number was found in the current user's personal address book, and "false" otherwise.
+* **Is from company directory**. "True" if the phone number was found in the current account's company directory, and "false" otherwise. This typically signifies a co-worker.
+* **Contact first name**.
+* **Contact last name**.
+* **Contact name**.
+* **Contact email**.
+* **Contact company**.
+* **Contact job title**.
+* **Contact business phone**.
+* **Contact home phone**.
+* **Contact mobile phone**.
+* **Contact company phone**.
+* **Contact assistant phone**.
+* **Contact other phone**.
+* **Contact primary phone**.
+* **Contact business phone**.
+* **Contact business address street**.
+* **Contact business address city**.
+* **Contact business address state**.
+* **Contact business address zip**.
+</details>

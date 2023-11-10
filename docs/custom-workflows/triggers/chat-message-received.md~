@@ -1,0 +1,18 @@
+### Chat message received
+
+This event is fired when the current user receives a chat message via RingCentral's unified messaging app. 
+
+**Variables added to automation context**
+
+* **Team ID**. A string for the unique ID of the team in which the message was received.
+* **Message text**. The text of the message. 
+* **Team name**. The name of the team in which the message was received.
+* **Chat type**. Possible values: 
+    * Team. A chat defined by a topic. Members of the team may change over time. 
+    * Group. A chat defined exclusively by its members. Adding a user to a group chat results in a new group chat. 
+    * Direct. A message between two people.
+    * Personal. A special private chat a user can have with themselves. Good for receiving private notifications from other apps. 
+    * Everyone. A special chat in which all users in an account are automatically made members. 
+* **Mention me**. True if the message mentions the current user. False otherwise. 
+* **Message received date**.
+* **Message received day of week**.

@@ -1,0 +1,13 @@
+# RingCentral Automator
+
+Welcome to RingCentral Automator, a no-code workflow design tool created to help RingCentral customers automate common tasks and workflows, and design their own custom workflows to address use cases not solved by one of our pre-existing [workflow templates](./workflow-templates/index.md). 
+
+## Getting started using RingCentral Automator
+
+The fastest way to get started using RingCentral Automator is to select an automation from a list of pre-packaged, pre-designed automation templates. Automation templates make implementing an automation as simple as filling out a simple form. 
+
+To create an automation, click the "New automation" button found in the upper-right corner of the automation listing screen. A dialog will appear allowing you to select from a number of templates, like:
+
+{! docs/inc/templates.md !}
+
+If your needs are not addressed by an existing template, then it is entirely possible the problem you are trying to solve can be addressed by creating a custom workflow. A custom workflow allows users to design their own solutions using a drag-and-drop user interface. 

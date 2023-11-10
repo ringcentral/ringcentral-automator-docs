@@ -1,0 +1,17 @@
+<details id="transcribe-media-file">
+  <summary>Transcribe media file</summary>
+
+Given a media file that lives at an internet-accessible URL, generates a transcription and summary of the media file's contents. 
+
+**Input**
+
+* **Audio media URL**. A URL to a media file that contains audio. 
+* **Language**. The language of spoken words in the media file.
+
+**Output**
+
+* **Transcript**. A full transcript of the referenced media file. 
+* **Sentiment**. The overall sentiment of transcribed file. Values can be "postive," "negative," or "neutral."
+* **Abstractive summary (long)**. A synthesized summary of the contents of the transcript, in long form. 
+* **Abstractive summary (short)**. A shortened synthesized summary of the contents of the transcript.
+</details>

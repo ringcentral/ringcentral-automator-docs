@@ -1,0 +1,352 @@
+### Triggers
+
+The creation of all custom workflows begin by selecting the event that will trigger the automation to be executed. When customizing an automation trigger, users can specify filtering conditions for the automation, which dictate the circumstances under which an automation will be executed. Users can specify whether all conditions must be met, or whether any (one or more) conditions must be met. 
+
+#### Limiting the frequency of an automation
+
+Users can also limit how often an automation will be run for any given triggering event. For example, suppose you are creating an SMS auto-reply, to notify someone that you are out-of-the-office. In such circumstances, you wish to only send an auto-reply once per day regardless of how many times a given individual may send you an SMS in a 24-hour period. 
+
+Each automation has a way to limit the frequency of its execution based upon the person triggering the event. Look and read carefully when editing a trigger to see how its execution can be throttled. 
+
+<details id="sms-received">
+  <summary>SMS received</summary>
+
+  This event is fired when the current user receives an SMS message via any of the phone numbers they have access to. 
+
+**Variables added to automation context**
+
+* **Sender's phone number**.
+* **Sender's name**.
+* **Recipient's phone number**.
+* **Message text**.
+* **Is image attached**.
+* **Message received date**.
+* **Message received time**.
+* **Message received day of week**.
+</details>
+
+<details id="chat-message-received">
+  <summary>Chat message received</summary>
+
+  This event is fired when the current user receives a chat message via RingCentral's unified messaging app. 
+
+**Variables added to automation context**
+
+* **Team ID**. A string for the unique ID of the team in which the message was received.
+* **Message text**. The text of the message. 
+* **Team name**. The name of the team in which the message was received.
+* **Chat type**. Possible values: 
+    * Team. A chat defined by a topic. Members of the team may change over time. 
+    * Group. A chat defined exclusively by its members. Adding a user to a group chat results in a new group chat. 
+    * Direct. A message between two people.
+    * Personal. A special private chat a user can have with themselves. Good for receiving private notifications from other apps. 
+    * Everyone. A special chat in which all users in an account are automatically made members. 
+* **Mention me**. True if the message mentions the current user. False otherwise. 
+* **Message received date**.
+* **Message received day of week**.
+</details>
+
+<details id="call-received">
+  <summary>Call received</summary>
+
+This event is fired when the current user receives a phone call at any of the phone numbers or extensions for which they are assigned or associated. 
+
+**Variables added to automation context**
+
+* **Call session ID**.
+* **Call telephony session ID**.
+* **Caller phone number**.
+* **Caller name**.
+* **Recipient phone number**.
+* **Recipient name**.
+* **Message received date**.
+* **Message received time**.
+* **Message received day of week**.
+</details>
+
+<details id="call-ended">
+  <summary>Call ended</summary>
+
+  This event is fired when the current user disconnects from a phone call, thus ending the current telephony session, for any of the phone numbers or extensions for which they are assigned or associated. 
+
+**Variables added to automation context**
+
+* **Call session ID**.
+* **Call telephony session ID**.
+* **Call direction**. Possible values: Inbound and Outbound.* **Caller phone number**.
+* **Caller name**.
+* **Recipient phone number**.
+* **Recipient name**.
+* **Call missed**.
+* **Call ended date**.
+* **Call ended time**.
+* **Call ended day of week**.
+</details>
+
+<details id="call-missed">
+  <summary>Call missed</summary>
+
+  This event is fired when a call comes into an extension, but is never answered or picked up. 
+
+* Voicemail-only extensions do not fire the missed call event, because no call that comes into a voicemail extension is ever missed - they are instantly picked up and a voicemail message is played. 
+* Call queues fire the missed call event when a user hangs up while waiting for someone to answer. 
+* Some call queues are configured to transfer unanswered calls to another extension, like a voicemail box. If this is the case for you, then the missed call event will not be fired for these calls. 
+
+**Variables added to automation context**
+
+* **Call session ID**.
+* **Call telephony session ID**.
+* **Call direction**. Possible values: Inbound and Outbound.
+* **Caller phone number**.
+* **Caller name**.
+* **Recipient phone number**.
+* **Recipient name**.
+* **Call ended date**.
+* **Call ended time**.
+* **Call ended day of week**.
+</details>
+
+<details id="voicemail-received">
+  <summary>Voicemail received</summary>
+
+  This event is fired after a voicemail is left for an extension. 
+
+**Variables added to automation context**
+
+* **Sender's phone number**.
+* **Sender's name**.
+* **Recipient's phone number**.
+* **Message received date**.
+* **Message received time**.
+* **Message received day of week**.
+* **Voicemail audio**. A URL to the voicemail media file.
+</details>
+
+### Conditionals
+
+Conditional nodes within an automation provide users with a way of forking the flow of their automation based upon a set of rules they define. For example, you may wish to send different SMS messages to someone contacting based upon their area code, or some other criteria. To create logic like this, one must first add a conditional node to their automation, and then populate the different paths of that conditional node with the actions they want to execute within that logical pathway. 
+
+There is no limit on the number of conditions a workflow can contain, and conditions can be nested as well, allowing for the formulation of more complex logical pathways. 
+
+#### Variables types
+
+You may find when defining the conditions of a conditional node different types of varibales around which a rule can be built. These types are utilized to help users in finding the right variable to test. These variable types are:
+
+* **Trigger variables**. These variables related to the event that caused the automation to be executed. This may contain for example the phone number of the person who may have sent an SMS message that in turn triggered the automation.
+
+* **User variables**. These variables relate to the person who owns the automation, or on whose behalf the automation is being run. This can be useful if you want to build a rule based upon whether or not the current user's status is set to "do not disturb."
+
+* **Action variables**. These variables relate to the variables added to the automation in response to another action previously being executed. For example, you may wish to generate a transcription using an action, then respond different based upon the content's of that transcription. 
+
+#### if/else
+
+Automator's primary conditional node is a simple true/false, or boolean pathway. When this is added to your automation, two different pathways are established:
+
+* One is when the conditions of the node are met (the "true" branch)
+* One is when the conditions are NOT met (the "false" branch)
+
+### Actions
+
+Actions are the nodes within the workflow that perform some function on the user's behalf. They constitute all the things that are actually done. Each action requires some degree of input to direct to perform the specified action, and often produces some output as well, that can then be referenced in subsequent nodes of the automation. Listed below are the actions currently supported by Automator. 
+
+<details id="send-sms">
+  <summary>Send SMS</summary>
+
+Sends text via SMS from one phone number, to another phone number. 
+
+When using the "Send SMS" action, please bear in mind the following:
+
+* sending SMS via the RingCentral platform may incur additional costs depending upon your license
+* sending an SMS does not guarantee that an SMS message will be delivered, especially if the receiving phone number is incapable of receiving an SMS, e.g. a fax machine
+* one's ability to send an SMS depends upon the automator's owner being assigned a phone number from which SMS are allowed to be sent
+* one's ability to send an SMS depends upon an administrator setting up their account properly to send SMS after having gone through the TCR process of registering campaigns and so forth
+
+If you are having difficulty sending SMS, please consult the [troubleshooting guide]() located elsewhere in the documentation.
+
+**Input**
+
+* **Sender's phone number**. This refers to the phone number the recipient of the SMS will see as the sender of the message they receive. A user can only send SMS messages from phone numbers they are authorized to send SMS messages from, and from phone numbers that for which SMS has been enabled. 
+* **Recipient's phone number**. This refers to the phone number the SMS message will be sent to. While there are no restrictions placed on the recipient's phone number, users should be aware that not all phone number are necessarily capable of receiving an SMS, and that Automator is not able to distinguish between those than can and those that can't receive SMS. 
+* **Message text**. The message you wish to send to the recipient. Users can insert variables into a message that can will be substituted for the corresponding value prior to the message being sent. For example, you wish to address the receipient by name, you can insert the following variable into your SMS text message: `{trigger.sender.name}`. To see a complete list of variables you can insert into a message, type the "#" (hash sign) into the text input.
+
+**Output**
+
+None. 
+</details>
+
+<details id="send-message">
+  <summary>Send message</summary>
+
+Sends a chat message to a team, group or person via RingCentral's unified messaging application. 
+
+When selecting the chat you want to post your message to, you may observe that not all chats can be found in the select menu, especially if that team was added recently. In this circumstance, logout of Automator and then log back in so that you can force the list of teams to be updated. In the future, the ability to refresh the list of teams without logging out will be added. 
+
+**Input**
+
+* **Recipient conversation**. The team, group, or direct chat you want to post the message to. The destination of the message can be selected from a pull-down menu. 
+
+**Output**
+
+None.
+</details>
+
+<details id="create-meeting">
+  <summary>Create meeting</summary>
+
+Creates a meeting bridge in which a meeting can take place. 
+
+You may notice that you do not need to provide a date and time in order to create a meeting. That is because RingCentral delegates the schedule of a meeting exclusively to the calendaring system in which a meeting URL is inserted. Therefore, all this action will do is generate a room in which a meeting will occur, and provide that URL to you as output so that you can transmit to a person or external system.
+
+**Input**
+
+* **Meeting name**. The name of the meeting.  
+* **Meeting password**. The password required to access the meeting. 
+* **Participants can only join after me**. An option to not start the meeting until the host arrives. 
+* **Enable waiting room for**. An option to determine whom will be placed in a waiting room prior to the start of the meeting.
+
+**Output**
+
+* **Meeting link**. The meeting bridge's fully-formed join URL.
+</details>
+
+<details id="make-ringout-call">
+  <summary>Make RingOut call</summary>
+
+Initiates a phone call between two parties using the RingOut protocol. The RingOut protocol works by calling the caller. When the caller answers the phone, the other party to the phone call is called. When that person answers, the two parties are connected. 
+
+**Input**
+
+* **Originating phone number**. The phone number of the caller. 
+* **Recipient phone number**. The phone number of the callee, or recipient of the caller's call. 
+* **Prompt before connecting calls**. An option to prompt the caller to press "1" prior to calling the caller. 
+
+**Output**
+
+None.
+</details>
+
+<details id="send-http-request">
+  <summary>Send HTTP request</summary>
+
+Transmit an HTTP request to a given URL. 
+
+This is especially useful when integrating with third-party services in which there is a need to transmit content to an external API or service. 
+
+Currently, this action does not parse the response or make the contents of the response available to subsequent actions. Therefore, it may be difficult to detect and respond to errors.
+
+**Input**
+
+* **URL**. The URL to make the HTTP request to.
+* **Method**. The HTTP method of the request. Supports GET and POST.
+* **Content-type**. The content-type of the request. 
+* **Request body**. The body of the request, used in POST requests. 
+
+**Output**
+
+None.
+</details>
+
+<details id="transcribe-media-file">
+  <summary>Transcribe media file</summary>
+
+Given a media file that lives at an internet-accessible URL, generates a transcription and summary of the media file's contents. 
+
+**Input**
+
+* **Audio media URL**. A URL to a media file that contains audio. 
+* **Language**. The language of spoken words in the media file.
+
+**Output**
+
+* **Transcript**. A full transcript of the referenced media file. 
+* **Sentiment**. The overall sentiment of transcribed file. Values can be "postive," "negative," or "neutral."
+* **Abstractive summary (long)**. A synthesized summary of the contents of the transcript, in long form. 
+* **Abstractive summary (short)**. A shortened synthesized summary of the contents of the transcript.
+</details>
+
+<details id="lookup-contact">
+  <summary>Lookup contact</summary>
+
+Looks up a contact in your RingCentral address book, both your internal company directory, as well as your personal address book. 
+
+When combined with the "create contact" action, this is very helpful in creating customized responses based upon whether you have previously corresponded with an individual. It is also useful to be able to disambiguate between internal communications (does the person sending me an SMS have an entry within our internal company directory?) and external or customer communications. 
+
+**Input**
+
+* **Phone number**. Looks up a contact by phone number. 
+
+**Output**
+
+* **Contact exists**. "True" if the phone number was found in any address book, and "false" otherwise. 
+* **Is personal contact**. "True" if the phone number was found in the current user's personal address book, and "false" otherwise.
+* **Is from company directory**. "True" if the phone number was found in the current account's company directory, and "false" otherwise. This typically signifies a co-worker.
+* **Contact first name**.
+* **Contact last name**.
+* **Contact name**.
+* **Contact email**.
+* **Contact company**.
+* **Contact job title**.
+* **Contact business phone**.
+* **Contact home phone**.
+* **Contact mobile phone**.
+* **Contact company phone**.
+* **Contact assistant phone**.
+* **Contact other phone**.
+* **Contact primary phone**.
+* **Contact business phone**.
+* **Contact business address street**.
+* **Contact business address city**.
+* **Contact business address state**.
+* **Contact business address zip**.
+</details>
+
+<details id="create-personal-contact">
+  <summary>Create personal contact</summary>
+
+Creates a new record within the current user's personal address book. 
+
+*Automator does not have the ability to create records within a company's primary directory, as that is most often managed externally to RingCentral.* 
+
+**Input**
+
+* **First name**.
+* **Last name**.
+* **Email**.
+* **Phone number**.
+* **Phone number label**.
+* **Company**.
+* **Notes**.
+
+**Output**
+
+None. 
+</details>
+
+<details id="comment">
+  <summary>Comment</summary>
+
+Inserts a log entry into the current automation's history. This is especially helpful when trying to debug or troubleshoot an automation, allowing users to see the value of a given variable to better understand how that variable may impact the logic or flow of an automation. 
+
+**Input**
+
+* **Comment text**. The message you wish to save to your automation history. Users can insert variables into a comment that will be substituted for the corresponding value prior to the log entry being saved. To see a complete list of variables you can insert into a comment, type the "#" (hash sign) into the text input.
+
+**Output**
+
+None.
+</details>
+
+
+<details id="exit">
+  <summary>Exit</summary>
+
+Causes the automation to terminate. Every automation MUST end with an exit action. If any branch within an automation lacks an exit action, the automation will be considered incomplete and cannot be saved. 
+
+**Input**
+
+None.
+
+**Output**
+
+None. 
+</details>

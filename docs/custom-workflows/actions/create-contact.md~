@@ -1,0 +1,21 @@
+<details id="create-personal-contact">
+  <summary>Create personal contact</summary>
+
+Creates a new record within the current user's personal address book. 
+
+*Automator does not have the ability to create records within a company's primary directory, as that is most often managed externally to RingCentral.* 
+
+**Input**
+
+* **First name**.
+* **Last name**.
+* **Email**.
+* **Phone number**.
+* **Phone number label**.
+* **Company**.
+* **Notes**.
+
+**Output**
+
+None. 
+</details>

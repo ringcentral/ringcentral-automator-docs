@@ -1,0 +1,15 @@
+<details id="send-message">
+  <summary>Send message</summary>
+
+Sends a chat message to a team, group or person via RingCentral's unified messaging application. 
+
+When selecting the chat you want to post your message to, you may observe that not all chats can be found in the select menu, especially if that team was added recently. In this circumstance, logout of Automator and then log back in so that you can force the list of teams to be updated. In the future, the ability to refresh the list of teams without logging out will be added. 
+
+**Input**
+
+* **Recipient conversation**. The team, group, or direct chat you want to post the message to. The destination of the message can be selected from a pull-down menu. 
+
+**Output**
+
+None.
+</details>

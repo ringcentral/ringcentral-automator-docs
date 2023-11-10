@@ -1,0 +1,71 @@
+# Project information
+site_name: RingCentral Automator
+site_url: https://git.ringcentral.com/rc-labs/ringcentral-workflow
+
+# Repository
+#repo_url: https://git.ringcentral.com/rc-labs/ringcentral-workflow
+#repo_name: rc-labs/ringcentral-workflow
+#edit_uri: tree/master/docs
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+      - navigation.path
+#      - navigation.sections
+      - search.sharing
+      - search.highlight
+
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - mdx_include
+  - admonition
+#  - glightbox
+
+copyright: "2023 RingCentral, Inc. All rights reserved."
+
+nav:
+- 'Home': index.md
+- 'User Guide': user-guide.md
+- 'Admin Guide': admin-guide.md
+- 'Workflow templates':
+  - 'Overview': workflow-templates/index.md
+  - 'After-hours auto-reply': workflow-templates/after-hours.md
+  - 'Keyword-based auto-reply': workflow-templates/keywords.md
+  - 'Missed call auto-reply': workflow-templates/missed-call.md
+  - 'Out-of-office auto-reply': workflow-templates/ooo-autoreplies.md
+  - 'SMS help request': workflow-templates/help-request.md
+  - 'SMS opt-in/out auto-reply': workflow-templates/sms-optin-optout.md
+  - 'Voicemail auto-reponse': workflow-templates/voicemail-autoresponse.md
+  - 'Voicemail notification': workflow-templates/voicemail-notification.md
+- 'Custom workflows':
+  - 'Overview': custom-workflows/index.md
+  - 'Flow control': custom-workflows/conditionals.md
+  - 'Variables': custom-workflows/variables.md
+  - 'Triggers': 
+    - 'Overview': custom-workflows/triggers/index.md
+    - 'Call ended': custom-workflows/triggers/call-ended.md
+    - 'Call missed': custom-workflows/triggers/call-missed.md
+    - 'Call received': custom-workflows/triggers/call-received.md
+    - 'Chat message received': custom-workflows/triggers/chat-message-received.md
+    - 'SMS received': custom-workflows/triggers/sms-received.md
+    - 'Voicemail received': custom-workflows/triggers/voicemail-received.md
+  - 'Actions':
+    - 'Overview': custom-workflows/actions/index.md
+    - 'Comment': custom-workflows/actions/comment.md
+    - 'Create personal contact': custom-workflows/actions/create-contact.md
+    - 'Create meeting bridge': custom-workflows/actions/create-meeting.md
+    - 'Exit': custom-workflows/actions/exit.md
+    - 'Lookup contact': custom-workflows/actions/lookup-contact.md
+    - 'Place call': custom-workflows/actions/ringout.md
+    - 'Send chat message': custom-workflows/actions/send-chat-message.md
+    - 'Send SMS': custom-workflows/actions/send-sms.md
+    - 'Send HTTP request': custom-workflows/actions/http-request.md
+    - 'Transcribe media file': custom-workflows/actions/transcribe.md
+- 'Automation recipes': recipes.md
+- 'Support and troubleshooting': support.md
+- 'About': about.md
+
+
