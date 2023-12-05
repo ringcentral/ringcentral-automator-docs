@@ -1,15 +1,15 @@
 # Triggers
 
-The creation of all [custom workflows](../) begin by selecting the event that will trigger the automation to be executed. When customizing an automation trigger, users can specify filtering conditions for the automation, which dictate the circumstances under which an automation will be executed. Users can specify whether all conditions must be met, or whether any (one or more) conditions must be met. 
+The creation of all [custom workflows](./index.md) begin by selecting the event that will trigger the automation to be executed. When customizing an automation trigger, users can specify filtering conditions for the automation, which dictate the circumstances under which an automation will be executed. Users can specify whether all conditions must be met, or whether any (one or more) conditions must be met. 
 
 ## Index of all triggers
 
-* [Call ended](./call-ended/)
-* [Call missed](./call-missed/)
-* [Call received](./call-received/)
-* [Chat message received](./chat-message-received/)
-* [SMS received](./sms-received/)
-* [Voicemail received](./voicemail-received/)
+* [Call missed](call-missed.md)
+* [Call ended](call-ended.md)
+* [Call received](call-received.md)
+* [Chat message received](chat-message-received.md)
+* [SMS received](sms-received.md)
+* [Voicemail received](voicemail-received.md)
 
 ## Limiting the frequency of an automation
 
@@ -19,11 +19,11 @@ Each automation has a way to limit the frequency of its execution based upon the
 
 ## Variables added to an automation's context by a triggering event
 
-Each triggering event has metadata associated with it that will help govern how the automation will function. This metadata is accessed within the context of an automation via "trigger variables." For example, you may want to build a workflow that performs different functions depending upon the content of an SMS message that was received. The event associated with this is [SMS received](./sms-received/) and the trigger variable would be "message text."
+Each triggering event has metadata associated with it that will help govern how the automation will function. This metadata is accessed within the context of an automation via "trigger variables." For example, you may want to build a workflow that performs different functions depending upon the content of an SMS message that was received. The event associated with this is [SMS received](sms-received.md) and the trigger variable would be "message text."
 
 Consult the documentation for each trigger to see what variables it adds to the automations context. 
 
-See: [Variables](../variables/)
+See: [Variables](../variables.md)
 
 ## Administrator options
 

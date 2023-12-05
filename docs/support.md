@@ -20,7 +20,7 @@
 
   If you do not have a number assigned to you, contact your account administrator to have one assigned to you.
 
-  ![phone numbers](../img/phone-numbers.png)
+  ![phone numbers](./img/phone-numbers.png)
 
   **SMS feature is not enabled for your number/extension**
 
@@ -40,7 +40,7 @@
   4. Expand the "Call handling", then click "Settings" tab
   5. Scroll down to "Call / Fax / SMS Recipients" and select your extension as the "Operator Extension." It is extension 101 by default.
 
-  ![operator extension](../img/operator-extension.png)
+  ![operator extension](./img/operator-extension.png)
 
   Once you know the extension associated with your main company number or Operator, an administrator can load that extension into Automator. They can then build and design workflows on behalf of the Operator. To enable these workflows, the Operator will need to login or accept their Automator invite.
 </details>
@@ -108,7 +108,7 @@
 
   You can use "Copy team URL" feature in RingCentral Team Messaging, then you can get conversation id in the URL.
   
-  ![Copy Team URL](../img/copy-team-url.png){ style="max-width: 50%" }
+  ![Copy Team URL](./img/copy-team-url.png){ style="max-width: 50%" }
 </details>
 
 ## Using Automator

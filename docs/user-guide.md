@@ -2,9 +2,9 @@
 
 ## Creating an automation
 
-There are several ways to create an automation. The first and most common is by installing a pre-made automation using an [automation template](../workflow-templates/). You can find and discover these pre-made solutions by clicking the "New automation" button found on the listing screen for your automations. 
+There are several ways to create an automation. The first and most common is by installing a pre-made automation using an [automation template](./workflow-templates/index.md). You can find and discover these pre-made solutions by clicking the "New automation" button found on the listing screen for your automations. 
 
-The next way to create an automation is via Automator's workflow designer, a visual drag-and-drop tool that allows users to define [custom workflows](../custom-workflows/) using their own [logical rules](../custom-workflows/conditionals/) and [actions](../custom-workflows/actions/) for responding to certain events that can [trigger](../custom-workflows/triggers/) a workflow to be executed. 
+The next way to create an automation is via Automator's workflow designer, a visual drag-and-drop tool that allows users to define [custom workflows](./custom-workflows/index.md) using their own [logical rules](./custom-workflows/conditionals.md) and [actions](./custom-workflows/actions/index.md) for responding to certain events that can [trigger](./custom-workflows/triggers/index.md) a workflow to be executed. 
 
 !!! tip "You can also create an automation by importing them. See below."
 
@@ -14,7 +14,7 @@ There are a number of scenarios in which one would like to limit how frequently 
 
 To limit automations in this way, to control how often they are run in response to a given event, look for following option found by editing an automation, or by editing the trigger associated with an advanced workflow. 
 
-![automation frequency](../img/automation-frequency.png)
+![automation frequency](./img/automation-frequency.png)
 
 Any limit you set will apply within the context of a given individual you are communicating with. For example, you can limit an automation to run once per day per *phone number*. This means that if multiple people are texting you from multiple phone numbers, they will each receive your autoreply only once per day.  
 
@@ -26,13 +26,13 @@ Once an automation has been designed, built and tested, you may want to share th
 2. Edit the automation
 3. From the more menu, select "Export automation"
       
-      ![Exporting an automation menu](../img/export.png){style="max-width: 500px"}
+      ![Exporting an automation menu](./img/export.png){style="max-width: 500px"}
 	  
 ### Setting export parameters
 
-Automations can be complex with a lot of elements that can be customized. In fact, every input associated with every [action](../custom-workflows/actions/index.md) that comprise a [custom workflow](../custom-workflows/index.md) is conceivably a way to customize the behavior of an automation. At times, it may be important to constrain what elements of an automation can be customized. Perhaps your company wants to standardize and control what a specific auto-reply message might be, while preserving the ability to customize what phone numbers an automation is active for. In this case, one can define an export parameter during the export process. 
+Automations can be complex with a lot of elements that can be customized. In fact, every input associated with every [action](./custom-workflows/actions/index.md) that comprise a [custom workflow](./custom-workflows/index.md) is conceivably a way to customize the behavior of an automation. At times, it may be important to constrain what elements of an automation can be customized. Perhaps your company wants to standardize and control what a specific auto-reply message might be, while preserving the ability to customize what phone numbers an automation is active for. In this case, one can define an export parameter during the export process. 
 
-![Setting an export parameter](../img/export-set-param.png)
+![Setting an export parameter](./img/export-set-param.png)
 
 Export parameters are associated with a specific action input, and then assigned a label. When the automation is later imported, the user importing the automation will be prompted to provide a value for each defined export parameter. 
 
@@ -40,7 +40,7 @@ Export parameters are associated with a specific action input, and then assigned
 
 To import an automation you must first possess an export file (see "Exporting automations" above). Importing an automation will result in the creation of a custom automation within that user's list of automations. When the automation is imported, if the automation has any export parameters, the user will be prompted to provide a value for each of those export parameters. 
 
-![Importing an automation](../img/import.png)
+![Importing an automation](./img/import.png)
 
 ## Enabling and disabling automations
 

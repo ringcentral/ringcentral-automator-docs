@@ -22,6 +22,7 @@ plugins:
   - exclude:
       regex:
         - '^#.*'
+        - 'inc/templates.md'
 
 
 markdown_extensions:

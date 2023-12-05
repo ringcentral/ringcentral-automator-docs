@@ -4,7 +4,7 @@ This event is fired after a voicemail is left for an extension.
 
 ## Transcribing voicemails
 
-One can use the [transcribe action](../../actions/transcribe/) to transcribe the voicemail's media file and add the transcription text to the current automation's context. 
+One can use the [transcribe action](../actions/transcribe.md) to transcribe the voicemail's media file and add the transcription text to the current automation's context. 
 
 ## Trigger variables
 

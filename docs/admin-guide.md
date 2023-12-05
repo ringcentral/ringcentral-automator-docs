@@ -34,23 +34,23 @@ Auto-receptionists will have the ability to manage the following extension types
 1. the left-hand navigation, open "Extensions" section, and select extension
 2. Create and edit automations for the selected extension
 
-![manage-extensions](../img/manage-extensions.png)
+![manage-extensions](./img/manage-extensions.png)
 
-!!! info "For IvrMenu extensions, only the [call received](../custom-workflows/triggers/call-received/) and [call ended](../custom-workflows/triggers/call-ended/) triggers are supported. The [missed call event](../custom-workflows/triggers/call-missed/) is not supported for IvrMenu." 
+!!! info "For IvrMenu extensions, only the [call received](./custom-workflows/triggers/call-received.md) and [call ended](./custom-workflows/triggers/call-ended.md) triggers are supported. The [missed call event](./custom-workflows/triggers/call-missed.md) is not supported for IvrMenu." 
 
 ## Managing automations for users
 
 1. the left-hand navigation, click the “+” (plus sign) next to “Users.”
-   ![add-user-click](../img/add-user-click.png)
+   ![add-user-click](./img/add-user-click.png)
 
 2. Search for the name, phone number or extension in the dialog that appears.
-   ![search-user](../img/search-user.png)
+   ![search-user](./img/search-user.png)
 
 3. Click “Add”.
 
 This will add the user to your list of users whose automations you manage. Now select the user to view their automations.
 
-![view other's automation](../img/view-anothers-automation.png)
+![view other's automation](./img/view-anothers-automation.png)
 
 Create and edit automations for that user as you would for any other user.
 
@@ -66,7 +66,7 @@ RingCentral Automator allows for admins to create automations on behalf of other
 
 Automator allows only Super Admins to modify the runner of an automation associated with a user in their account. This is done either by editing the automation template, or by editing the trigger associated with an advanced workflow. 
 
-![admin options](../img/admin-options.png)
+![admin options](./img/admin-options.png)
 
 Admins can set the runner of an automation according to the following constraints:
 
@@ -80,7 +80,7 @@ The runner of an automation can only be assigned to accounts that have been acti
 In order for any automation to be run, the owner of the automation must have a fully-activated account inside of Automator. To activate an account, a user only needs to login and authorize Automator. Until such time, any automations created for a user will remain dormant, and a message will be displayed to users of Automator alerting them to this fact. 
 
 <figure markdown>
-  ![Setting import parameters](../img/resend-invites.png)
+  ![Setting import parameters](./img/resend-invites.png)
   <figcaption>Automations remain dormant until users login to Automator. Resend invites quickly to enable automations.</figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ When an administrator adds another user to the list of users they manage automat
 Any user can make a copy of an automation within their list of automations. Admins have the exclusive ability to copy automations to another user's account. This ability is useful when needing to deploy the same automation in a standardized way to a relatively large number of accounts or extensions. 
 
 <figure markdown>
-  ![Copy automations](../img/copy-automation.png)
+  ![Copy automations](./img/copy-automation.png)
   <figcaption>Replicate automations across your account</figcaption>
 </figure>
 

@@ -10,17 +10,17 @@ Each action requires input to function properly. These inputs govern what the ac
 
 Some actions also produce output. Output within the context of an action means that the action will add "action variables" to the current automation's context, making those values accessible to subsequent actions. 
 
-A good example is the [transcribe action](./transcribe/). As input you reference a URL to a media file. When it is done executing, it adds the "Transcript" variable to the automation's context, allowing you to reference the transcript later to send the transcript in an SMS, or to build [conditional logic](../conditionals/) based upon the contents of the transcript. 
+A good example is the [transcribe action](transcribe.md). As input you reference a URL to a media file. When it is done executing, it adds the "Transcript" variable to the automation's context, allowing you to reference the transcript later to send the transcript in an SMS, or to build [conditional logic](../conditionals.md) based upon the contents of the transcript. 
 
 ## List of available actions
 
-* [Comment](./comment/)
-* [Create personal contact](./create-contact/)
-* [Create meeting bridge](./create-meeting/)
-* [Exit](./exit/)
-* [Lookup contact](./lookup-contact/)
-* [Place RingOut call](./ringout/)
-* [Send chat message](./send-chat-message/)
-* [Send SMS](./send-sms/)
-* [Send HTTP request](./http-request/)
-* [Transcribe media file](./transcribe/)
+* [Comment](comment.md)
+* [Create personal contact](create-contact.md)
+* [Create meeting bridge](create-meeting.md)
+* [Exit](exit.md)
+* [Lookup contact](lookup-contact.md)
+* [Place RingOut call](ringout.md)
+* [Send chat message](send-chat-message.md)
+* [Send SMS](send-sms.md)
+* [Send HTTP request](http-request.md)
+* [Transcribe media file](transcribe.md)

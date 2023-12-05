@@ -18,7 +18,7 @@ To assist users in keeping track of people requesting to opt-out, this automatio
 * RESUBSCRIBE
 * START
 
-If you wish to customize the keywords this automation will respond to, convert the automation to an "advanced workflow" (see [Custom workflows](../../custom-workflows/) help section), and edit the appropriate conditional elements relating to keywords. 
+If you wish to customize the keywords this automation will respond to, convert the automation to an "advanced workflow" (see [Custom workflows](../custom-workflows/index.md) help section), and edit the appropriate conditional elements relating to keywords. 
 
 ## Configuration parameters
 

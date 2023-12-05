@@ -6,7 +6,7 @@ Variables are sometimes divided into different categories to facilitate selectin
 
 ### Trigger variables
 
-These are the primary set of variables users will interact with. They refer to the variables that contain information that accompanied the event that triggered, or initiated the execution of the automation. For triggers relating to SMS messages for example, this may include the phone number that sent the SMS, or received the SMS, or the SMS message itself. Each [trigger](../triggers/) inserts its own set of variables into the current automation's context. 
+These are the primary set of variables users will interact with. They refer to the variables that contain information that accompanied the event that triggered, or initiated the execution of the automation. For triggers relating to SMS messages for example, this may include the phone number that sent the SMS, or received the SMS, or the SMS message itself. Each [trigger](./triggers/index.md) inserts its own set of variables into the current automation's context. 
 
 ### Action output variables
 
