@@ -1,5 +1,21 @@
 # Troubleshooting
 
+## Why isn't my automation getting triggered?
+
+One of the most common questions from users of Automator happens when they setup an automation for the first time, and then try to trigger the automation by placing a phone call. They observe that their automation is not getting triggered, and they want to understand why. This is especially true for automations that are triggered in some way by a phone call. 
+
+In most cases, the trick to solving this problem rests in understanding how phone calls are routed through an account based on the account's call handling rules. That is because automations must be associated with where a call ultimately terminates in order for those automations to be triggered. Let's look at a common example in which one wants to send an SMS when a call is missed from a call queue. 
+
+First, let's look at what the customer experiences and how this is typically configured in RingCentral. 
+
+1. A customer calls your main company number, typically extension 101. 
+2. The customer hears an IVR prompt, "press one if you are an existing client, or press two for sales."
+3. The customer presses "2" and the call is transfered to a new extension of type "Call Queue," say extension 105.
+4. The customer waits at extension 105 for someone to become available.
+5. The customer waits a while, grows impatient, and hangs up. The call has now been missed.
+
+When looking at this flow, many will create an automation associated with the main company number, because that is what the customer dialed to contact them. This is a very logical conclusion to make. However, if you want to send an SMS when a call is missed while waiting for a member of the sales team to answer the phone, then in actuality, one needs to associate the automation with extension 105, the call queue extension that ultimately received the call, and where that call was ultimately terminated. 
+
 ## Sending SMS
 
 <details id="noSMS" markdown>
