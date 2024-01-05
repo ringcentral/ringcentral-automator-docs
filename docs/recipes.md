@@ -1,5 +1,18 @@
 # Automation recipes
 
+## Sending out SMS notes when you receive a new Voicemail
+
+So you want to acknowledge receiving a voicemail with a courteous SMS message informing the sender that you will listen to the voicemail and respond accordingly when you are able. You also want to notify yourself by SMS that a new voicemail has arrived for you.
+
+Here are the basic steps:
+
+* When a new voicemail is received, trigger an SMS response
+* Craft a friendly message using Automator’s data elements
+* Send an SMS message to the person that left it for you
+* Send an SMS message to yourself so you know you have a voicemail waiting for you to listen to
+
+You can [download this automation](./recipes/send_sms_new_voicemail.json){download} and [import it into your account](user-guide.md#importing-automations).
+
 ## Sending an out-of-office auto-reply for team messaging messages
 
 If you are going out of town, or taking a holiday and need to let your co-workers messaging you know, then it can be helpful to setup an automation that will send an auto-reply via team messaging whenever someone "at-mentions" you in a team, chat or conversation. One challenge however is that when one posts a message to a team, the messages in that team are automatically marked as read. So imagine going out of town, and when you return seeing all of your messages as being read. How would you know what messages you need to reply to?
