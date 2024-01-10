@@ -1,3 +1,7 @@
+---
+title: RingCentral Automator Cookbook
+---
+
 # Automation Cookbook
 
 A number of our most common automations that work right out-of-the-box are available via a [workflow template](../workflow-templates/index.md). Other automations may be less common, but no less important. 
@@ -24,7 +28,7 @@ What follows are a set of simple automations that you can think of as building b
   
     Learn how you can trigger an automation when a user navigates an IVR menu.
   
-    [Learn more](ivr-menu.md)
+    [Learn more](ivr-menus.md)
 
 - __Creating automations for call queues and more__
   

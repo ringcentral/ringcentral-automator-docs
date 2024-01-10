@@ -1,3 +1,7 @@
+---
+title: RingCentral automation templates
+---
+
 # Automation templates
 
 Automation templates are pre-composed workflows designed around common use cases and situations. They provide users, especially less technical ones, with an intuitive and simple way to setup and configure common workflows. 

@@ -1,3 +1,7 @@
+---
+title: Creatong custom workflows using Automator
+---
+
 # Creating custom workflows using Automator
 
 Custom workflows and automations are intended for power-users who wish to define more complex logic, rules and conditions than Automator's ready-made templates may provide out of the box. While it is the goal of Automator to enable any user to create a custom workflow, some may wish to enlist the help of someone more technical to consult on the creation of a custom workflow, especially if the creation of rules and specification of actions is something they are not comfortable with. 
