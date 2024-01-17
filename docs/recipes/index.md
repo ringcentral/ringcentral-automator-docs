@@ -16,7 +16,7 @@ What follows are a set of simple automations that you can think of as building b
   
     Let coworkers know in RingCentral app that you are out of the office.
   
-    [Download](glip-ooo-autoreply.json) | [Learn more](glip-ooo-autoreply.md)
+    [Download](chat-ooo-autoreply.json) | [Learn more](chat-ooo-autoreply.md)
 
 - __Send an SMS to users only once__
   

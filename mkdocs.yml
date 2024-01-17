@@ -15,6 +15,31 @@ theme:
 #      - navigation.sections
       - search.sharing
       - search.highlight
+  palette:
+    - scheme: default
+      primary: custom
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ringcentral
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ringcentraldevs
+extra_css:
+  - extra.css
 
 plugins:
   - search:
@@ -74,7 +99,7 @@ nav:
     - 'Transcribe media file': custom-workflows/actions/transcribe.md
 - 'Automation recipes':
     - 'Overview': recipes/index.md
-    - 'Glip OOO auto-reply': recipes/glip-ooo-autoreply.md
+    - 'Team Messaging OOO auto-reply': recipes/chat-ooo-autoreply.md
     - 'Send auto-reply only once': recipes/autoreply-only-once.md
     - 'Triggering from IVR menus': recipes/ivr-menus.md
     - 'Non-user extension automations': recipes/extensions.md

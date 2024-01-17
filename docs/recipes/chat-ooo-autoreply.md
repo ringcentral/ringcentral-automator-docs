@@ -18,5 +18,5 @@ This recipe works like this:
 * It immediately posts an auto-reply message (once per day, per chat)
 * It posts a message to your personal chat letting you know you received a message, linking to the team/chat to make it easier to find later. 
 
-You can [download this automation](glip-ooo-autoreply.json){download} and [import it into your account](../user-guide.md#importing-automations). 
+You can [download this automation](chat-ooo-autoreply.json){download} and [import it into your account](../user-guide.md#importing-automations). 
 
