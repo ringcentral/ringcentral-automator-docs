@@ -24,6 +24,18 @@ What follows are a set of simple automations that you can think of as building b
   
     [Download](autoreply-only-once.json) | [Learn more](autoreply-only-once.md)
 
+- __Voicemail autoresponse__
+  
+    Automatically respond via SMS to customers who leave a voicemail.
+  
+    [Download](voicemail-autoresponse.json) | [Learn more](voicemail-autoresponse.md)
+
+- __Missed call autoresponse__
+  
+    Send an SMS auto-reply the first time someone contacts you. 
+  
+    [Download](missed-call.json) | [Learn more](missed-call.md)
+
 - __Triggering automations from IVR menus__
   
     Learn how you can trigger an automation when a user navigates an IVR menu.

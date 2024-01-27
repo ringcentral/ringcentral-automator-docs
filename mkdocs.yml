@@ -55,7 +55,9 @@ markdown_extensions:
   - md_in_html
   - mdx_include
   - admonition
-#  - glightbox
+  - pymdownx.emoji:
+       emoji_index: !!python/name:material.extensions.emoji.twemoji 
+       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: "2023 RingCentral, Inc. All rights reserved."
 
@@ -97,12 +99,14 @@ nav:
     - 'Send SMS': custom-workflows/actions/send-sms.md
     - 'Send HTTP request': custom-workflows/actions/http-request.md
     - 'Transcribe media file': custom-workflows/actions/transcribe.md
-- 'Automation recipes':
+- 'Recipes':
     - 'Overview': recipes/index.md
     - 'Team Messaging OOO auto-reply': recipes/chat-ooo-autoreply.md
     - 'Send auto-reply only once': recipes/autoreply-only-once.md
     - 'Triggering from IVR menus': recipes/ivr-menus.md
     - 'Non-user extension automations': recipes/extensions.md
+    - 'Voicemail auto-response': recipes/voicemail-autoresponse.md
+    - 'Missed call auto-response': recipes/missed-call.md
 - 'Support and troubleshooting': support.md
 - 'About': about.md
 
