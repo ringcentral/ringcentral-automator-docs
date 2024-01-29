@@ -101,12 +101,13 @@ nav:
     - 'Transcribe media file': custom-workflows/actions/transcribe.md
 - 'Recipes':
     - 'Overview': recipes/index.md
-    - 'Team Messaging OOO auto-reply': recipes/chat-ooo-autoreply.md
-    - 'Send auto-reply only once': recipes/autoreply-only-once.md
-    - 'Triggering from IVR menus': recipes/ivr-menus.md
-    - 'Non-user extension automations': recipes/extensions.md
-    - 'Voicemail auto-response': recipes/voicemail-autoresponse.md
     - 'Missed call auto-response': recipes/missed-call.md
+    - 'Non-user extension automations': recipes/extensions.md
+    - 'Send auto-reply only once': recipes/autoreply-only-once.md
+    - 'Team Messaging OOO auto-reply': recipes/chat-ooo-autoreply.md
+    - 'Triggering from IVR menus': recipes/ivr-menus.md
+    - 'Unavailable auto-response': recipes/unavailable.md
+    - 'Voicemail auto-response': recipes/voicemail-autoresponse.md
 - 'Support and troubleshooting': support.md
 - 'About': about.md
 

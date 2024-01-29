@@ -36,6 +36,12 @@ What follows are a set of simple automations that you can think of as building b
   
     [:fontawesome-solid-download: Download](missed-call.json)
 
+- [__Unavailable autoresponse__](unavailable.md)
+  
+    Send an SMS in response to someone if your presence status is anything but "available."
+  
+    [:fontawesome-solid-download: Download](unavailabe.json)
+
 - [__Triggering automations from IVR menus__](ivr-menus.md)
   
     Learn how you can trigger an automation when a user navigates an IVR menu.
