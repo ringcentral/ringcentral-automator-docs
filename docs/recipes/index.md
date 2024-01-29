@@ -12,41 +12,37 @@ What follows are a set of simple automations that you can think of as building b
 
 <div class="grid cards" markdown>
 
-- __Team Messaging Out-of-office autoreply__
+- [__Team Messaging Out-of-office autoreply__](chat-ooo-autoreply.md)
   
     Let coworkers know in RingCentral app that you are out of the office.
   
-    [Download](chat-ooo-autoreply.json) | [Learn more](chat-ooo-autoreply.md)
+    [:fontawesome-solid-download: Download](chat-ooo-autoreply.json)
 
-- __Send an SMS to users only once__
+- [__Send an SMS to users only once__](autoreply-only-once.md)
   
     Send an SMS auto-reply the first time someone contacts you. 
   
-    [Download](autoreply-only-once.json) | [Learn more](autoreply-only-once.md)
+    [:fontawesome-solid-download: Download](autoreply-only-once.json)
 
-- __Voicemail autoresponse__
+- [__Voicemail autoresponse__](voicemail-autoresponse.md)
   
     Automatically respond via SMS to customers who leave a voicemail.
   
-    [Download](voicemail-autoresponse.json) | [Learn more](voicemail-autoresponse.md)
+    [:fontawesome-solid-download: Download](voicemail-autoresponse.json)
 
-- __Missed call autoresponse__
+- [__Missed call autoresponse__](missed-call.md)
   
     Send an SMS auto-reply the first time someone contacts you. 
   
-    [Download](missed-call.json) | [Learn more](missed-call.md)
+    [:fontawesome-solid-download: Download](missed-call.json)
 
-- __Triggering automations from IVR menus__
+- [__Triggering automations from IVR menus__](ivr-menus.md)
   
     Learn how you can trigger an automation when a user navigates an IVR menu.
-  
-    [Learn more](ivr-menus.md)
 
-- __Creating automations for call queues and more__
+- [__Creating automations for call queues and more__](extensions.md)
   
     Learn how to setup an automation for non-user-based extensions, e.g. voicemail boxes, IVR menus, call queues and more.
-  
-    [Learn more](extensions.md)
 
 </div>
 
