@@ -1,5 +1,10 @@
 # RingCentral Automator
 
+!!! tip inline end "Share your workflow"
+    Have a workflow you love? Export and share it with the community as a [recipe](recipes/index.md).
+	
+	[Share your recipe via Github &raquo;](https://github.com/ringcentral/ringcentral-automator-docs/issues/new)
+
 Welcome to RingCentral Automator, a no-code workflow design tool created to help RingCentral customers automate common tasks and workflows, as well as design their own custom workflows to address use cases not solved by one of our pre-existing [workflow templates](./workflow-templates/index.md). 
 
 ## Getting started using RingCentral Automator

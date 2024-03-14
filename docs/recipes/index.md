@@ -4,6 +4,10 @@ title: RingCentral Automator Cookbook
 
 # Automation Cookbook
 
+!!! tip "Share your favorite workflow recipe with the community"
+    We would love to learn more about your favorite workflow, and how it has positively impacted you. Please consider exporting your most useful recipe and sharing it with us, so that we can publish it and so that others might benefit from it as well. 
+	[Share your recipe via Github &raquo;](https://github.com/ringcentral/ringcentral-automator-docs/issues/new)
+
 A number of our most common automations that work right out-of-the-box are available via a [workflow template](../workflow-templates/index.md). Other automations may be less common, but no less important. 
 
 What follows are a set of simple automations that you can think of as building blocks. Each recipe can stand on its own, but can also be combined with other recipes to make highly customized automations that more precisely meet your needs. Use recipes to learn how to solve common problems workflow designers may have. 
