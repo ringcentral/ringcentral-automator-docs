@@ -108,6 +108,7 @@ nav:
     - 'Triggering from IVR menus': recipes/ivr-menus.md
     - 'Unavailable auto-response': recipes/unavailable.md
     - 'Voicemail auto-response': recipes/voicemail-autoresponse.md
+    - "We don't accept SMS auto-reponse": recipes/we-dont-accept-sms.md
 - 'Support and troubleshooting': support.md
 - 'About': about.md
 

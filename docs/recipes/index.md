@@ -44,7 +44,13 @@ What follows are a set of simple automations that you can think of as building b
   
     Send an SMS in response to someone if your presence status is anything but "available."
   
-    [:fontawesome-solid-download: Download](unavailabe.json)
+    [:fontawesome-solid-download: Download](unavailable.json)
+
+- [__We don't reply to SMS autoresponse__](we-dont-accept-sms.md)
+  
+    Reply to every SMS you receive letting people know, "we don't reply to SMS, pleae call."
+  
+    [:fontawesome-solid-download: Download](we-dont-accept-sms.json)
 
 - [__Triggering automations from IVR menus__](ivr-menus.md)
   

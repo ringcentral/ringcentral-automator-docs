@@ -1,0 +1,76 @@
+{
+  "name": "We don't accept SMS auto-reply",
+  "nodes": [
+    {
+      "id": "trigger",
+      "position": {
+        "x": 250,
+        "y": 80
+      },
+      "type": "trigger",
+      "data": {
+        "limitation": {
+          "count": 1,
+          "interval": "hour"
+        },
+        "nextNodes": [
+          "action-1712696329210"
+        ],
+        "matchType": "and",
+        "description": "",
+        "rules": [],
+        "label": "SMS received",
+        "type": "newSMS"
+      }
+    },
+    {
+      "id": "action-1712696329210",
+      "position": {
+        "x": 250,
+        "y": 280
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"toPhoneNumbers\":[{\"phoneNumber\":\"{trigger.sender.phoneNumber}\"}],\"fromPhoneNumber\":\"{trigger.recipient.phoneNumber}\",\"messageText\":\"$$PARAM$$\"}",
+        "parentNodeId": "trigger",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-1712696231815"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-1712696231815",
+      "position": {
+        "x": 250,
+        "y": 480
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-1712696329210",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "action-params-action-1712696329210-messageText",
+      "name": "Auto-response message",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-1712696329210",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    }
+  ],
+  "version": 1
+}
