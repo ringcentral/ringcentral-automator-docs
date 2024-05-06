@@ -38,6 +38,9 @@ Auto-receptionists will have the ability to manage the following extension types
 
 !!! info "For IvrMenu extensions, only the [call received](./custom-workflows/triggers/call-received.md) and [call ended](./custom-workflows/triggers/call-ended.md) triggers are supported. The [missed call event](./custom-workflows/triggers/call-missed.md) is not supported for IvrMenu." 
 
+!!! info "Only most recent ten users will be displayed"
+    During the beta, only the most recently added ten users will be listed in your list of users/extensions. If you have more than ten active users, they are still in the system, and their automations will continue to run even if they are not in your list of users. You may always add them back to your list of users if you need to view or manage their automations on their behalf.  
+
 ## Managing automations for users
 
 1. the left-hand navigation, click the “+” (plus sign) next to “Users.”
