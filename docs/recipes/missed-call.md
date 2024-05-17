@@ -17,7 +17,7 @@ This automation template responds to any missed call with a simple SMS message t
 !!! warning "Be aware of consent"
     Don't forget, sending an SMS message to someone who has not provided consent is not permitted. This recipe sends an SMS auto-reply for every missed call, whether or not the recipient has provided that consent. 
 
-[:fontawesome-solid-download: Download automation](missed-call.json){ .md-button }
+[:fontawesome-solid-download: Download automation](missed-call.json){: download .md-button }
 
 Learn how to [import it into your account](../user-guide.md#importing-automations). 
 

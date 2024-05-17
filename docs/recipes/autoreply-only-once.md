@@ -14,7 +14,7 @@ Let's say you want to set up an SMS autoresponse that is triggered whenever a ne
 * Go ahead, and send your auto-reply message. 
 * Finally, add the phone number to your address book so that the next time they send a message, they will short circuit the automation and prevent it from messaging them again. 
 
-[:fontawesome-solid-download: Download automation](autoreply-only-once.json){ .md-button }
+[:fontawesome-solid-download: Download automation](autoreply-only-once.json){: download .md-button }
 
 Learn how to [import it into your account](../user-guide.md#importing-automations). 
 

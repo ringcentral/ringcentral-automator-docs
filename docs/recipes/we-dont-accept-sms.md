@@ -10,6 +10,6 @@ This recipe is a great example of an automation that responds to all incoming me
 
 Technically, this automation could be used to reply to all incoming SMS messages with an arbitrary message of your choice. This is because at its core this workflow is simply and without much discrimination, replies to all incoming SMS messages with the same static message. 
 
-[:fontawesome-solid-download: Download automation](we-dont-accept-sms.json){ .md-button }
+[:fontawesome-solid-download: Download automation](we-dont-accept-sms.json){: download .md-button }
 
 Learn how to [import it into your account](../user-guide.md#importing-automations). 

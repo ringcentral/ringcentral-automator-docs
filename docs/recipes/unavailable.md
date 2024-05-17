@@ -17,7 +17,7 @@ Feel free to customize the automation by editing the filters associated with the
 !!! hint "Delivery of SMS is not guaranteed"
     Please bear in mind that only phone numbers capable of receiving SMS will receive a response. If you miss a call from someone who called from a non-SMS-enabled phone, then they are unlikely to get your auto-reply. 
 
-[:fontawesome-solid-download: Download automation](unavailable.json){ .md-button }
+[:fontawesome-solid-download: Download automation](unavailable.json){: download .md-button }
 
 Learn how to [import it into your account](../user-guide.md#importing-automations). 
 
