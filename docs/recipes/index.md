@@ -20,37 +20,37 @@ What follows are a set of simple automations that you can think of as building b
   
     Let coworkers know in RingCentral app that you are out of the office.
   
-    [:fontawesome-solid-download: Download](chat-ooo-autoreply.json)
+    [:fontawesome-solid-download: Download](chat-ooo-autoreply.json){: download }
 
 - [__Send an SMS to users only once__](autoreply-only-once.md)
   
     Send an SMS auto-reply the first time someone contacts you. 
   
-    [:fontawesome-solid-download: Download](autoreply-only-once.json)
+    [:fontawesome-solid-download: Download](autoreply-only-once.json){: download }
 
 - [__Voicemail autoresponse__](voicemail-autoresponse.md)
   
     Automatically respond via SMS to customers who leave a voicemail.
   
-    [:fontawesome-solid-download: Download](voicemail-autoresponse.json)
+    [:fontawesome-solid-download: Download](voicemail-autoresponse.json){: download }
 
 - [__Missed call autoresponse__](missed-call.md)
   
     Send an SMS auto-reply the first time someone contacts you. 
   
-    [:fontawesome-solid-download: Download](missed-call.json)
+    [:fontawesome-solid-download: Download](missed-call.json){: download }
 
 - [__Unavailable autoresponse__](unavailable.md)
   
     Send an SMS in response to someone if your presence status is anything but "available."
   
-    [:fontawesome-solid-download: Download](unavailable.json)
+    [:fontawesome-solid-download: Download](unavailable.json){: download }
 
 - [__We don't reply to SMS autoresponse__](we-dont-accept-sms.md)
   
     Reply to every SMS you receive letting people know, "we don't reply to SMS, pleae call."
   
-    [:fontawesome-solid-download: Download](we-dont-accept-sms.json)
+    [:fontawesome-solid-download: Download](we-dont-accept-sms.json){: download }
 
 - [__Triggering automations from IVR menus__](ivr-menus.md)
   
