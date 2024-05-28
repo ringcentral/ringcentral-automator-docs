@@ -17,4 +17,5 @@ One can use the [transcribe action](../actions/transcribe.md) to transcribe the 
 | **Message received time** | time | The time the voicemail was received, in the format of HH:MM:SS (AM|PM) | 
 | **Message received day of week** | day of the week | |
 | **Voicemail audio** | URL | A URL pointing to the voicemail's media file. |
+| **Voicemail duration (seconds)** | integer | The duration of the voicemail in seconds. |
 
