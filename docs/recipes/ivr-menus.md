@@ -26,7 +26,7 @@ We will have two IVR menus.
 
 ![ivr-menus](../img/ivr-menus.png)
 
-First menu is the IVR menu that you want caller to press keys to trigger automation. Let's call the first extension "IVR Menu 1".
+First menu is the IVR menu that you want caller to press keys to trigger automation. Let's call the first extension "IVR Menu A".
 
 Let's set prompt to say "Press 1 get to a link by SMS":
 
@@ -46,7 +46,7 @@ Login into RingCentral Automator with admin account. Then **go to IVR Menu B's p
 
 ![automator-ivr-menu-b](../img/automator-ivr-menu-b.png)
 
-Import following automation template file n for IVR Menu B:
+Import following automation template file for IVR Menu B:
 
 ![automator-ivr-menu-b-import](../img/automator-ivr-menu-b-import.png)
 
