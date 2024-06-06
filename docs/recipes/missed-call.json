@@ -142,7 +142,7 @@
     },
     {
       "id": "action-params-action-sms-messageText",
-      "name": "Enter your auto-reply's message test",
+      "name": "Enter your auto-reply's message text",
       "type": "text",
       "limitLength": 500,
       "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
