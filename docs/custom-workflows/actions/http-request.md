@@ -15,8 +15,8 @@ This action will transmit an HTTP request to a given URL. This is especially use
 | **Request body** | String   | The body of the request, used in POST requests.                     |
 | **Headers**      | KeyValue | The HTTP headers of the request.                                    |
 
-!!! info "Info"
-    When URL is set to endpoint of [RingCentral APIs](https://developers.ringcentral.com/api-reference/) (domain: https://platform.ringcentral.com), the Authorization header will be set with the automations's runner's token automatically.
+!!! hint "Authenticating with RingCentral APIs"
+    When the HTTP request action is used to call a [RingCentral API](https://developers.ringcentral.com/api-reference/), which we detect by looking at the hostname of the URL, the request's `Authorization` header will be set for you automatically using the automation runner's access token.
 
 ## Output
 
