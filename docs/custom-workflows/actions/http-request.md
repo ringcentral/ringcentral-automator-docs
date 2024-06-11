@@ -7,13 +7,13 @@ This action will transmit an HTTP request to a given URL. This is especially use
 
 ## Input
 
-| Variable         | Type     | Description                                                        |
-|------------------|----------|--------------------------------------------------------------------|
-| **URL**          | URL      | The URL to make the HTTP request to.                               |
-| **Method**       | String   | The HTTP method of the request. Supports GET, POST, PUT and PATCH. |
-| **Content-type** | String   | The content-type of the request.                                   |
-| **Request body** | String   | The body of the request, used in POST requests.                    |
-| **Headers**      | KeyValue | The HTTP headers of the request.                                   |
+| Variable         | Type     | Description                                                                |
+|------------------|----------|----------------------------------------------------------------------------|
+| **URL**          | URL      | The URL to make the HTTP request to.                                       |
+| **Method**       | String   | The HTTP method of the request. Supports GET, POST, PUT, PATCH and DELETE. |
+| **Content-type** | String   | The content-type of the request.                                           |
+| **Request body** | String   | The body of the request, used in POST, PUT, PATCH and DELETE requests.     |
+| **Headers**      | KeyValue | The HTTP headers of the request.                                           |
 
 !!! info "Info"
     When URL is set to endpoint of [RingCentral APIs](https://developers.ringcentral.com/api-reference/) (domain: https://platform.ringcentral.com), the Authorization header will be set with the automations's runner's token automatically.
