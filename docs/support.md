@@ -57,9 +57,19 @@ In order to send an SMS from your company's main number, the person logged into 
 
 Once you know the extension associated with your main company number or Operator, an administrator can load that extension into Automator. They can then build and design workflows on behalf of the Operator. To enable these workflows, the Operator will need to login or accept their Automator invite.
 
-How can I prevent Automator from sending messages too frequently?
+### How can I prevent Automator from sending messages too frequently?
 
 Automator allows you to set limitations on the frequency of automation running. To prevent excessive messaging, please refer to the user guide for instructions on how to configure these limitations.
+
+### How do I sent an SMS from a different phone number?
+
+From time to time you may receive an SMS from one phone number, and want to send a response from an alternative phone number. Of course, there may be a number of different circumstances in which you would want to send an SMS from a different RingCentral phone number. However, sometimes, this phone number you want to send an SMS from is not listed in the pull-down menu in which you select the sending phone number. 
+
+This trick to addressing this is often found in an admin [modifying the runner](./admin-guide.md#modifying-the-runner-of-an-automation) of the automation. When this is done, the automation can be configured to send an SMS from a phone number associated with the runner of the automation. 
+
+![admin options](./img/admin-options.png)
+
+This option is only available to [administrators](./admin-guide.md).
 
 ## Automation templates
 
