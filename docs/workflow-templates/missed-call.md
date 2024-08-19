@@ -1,5 +1,8 @@
 # Missed call auto-response
 
+!!! info "Deprecated"
+    This template is deprecated. Please refer to [the missed call recipe](../recipes/missed-call.md) for missed call auto-response.
+
 This automation results in an SMS message being send to a caller whose call into a phone number or extension is missed. The term "missed call" has a specific technical meaning which is important to understand in order to employ this automation successfully. A "missed call" refers to a call in which a user hangs up prior to being connected to a logical terminus of a call flow. Let's explore some examples:
 
 **Examples of missed calls**
