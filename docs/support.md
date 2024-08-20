@@ -97,6 +97,18 @@ We have new release to support call received event for voicemail-only extension.
 
 Sending an SMS on behalf of a call queue is not currently supported. If you need to send SMS messages from a call queue's direct number (or "DL"), you must create the call queue without having a call queue manager. The call queue must be set with unique email address and password and to send SMS from that call queue number, the app must be authenticated using the call queue's login credentials.
 
+##### Alternative solution
+
+The challenge in sending SMS from a call queue's phone number rests in the fact that you cannot send SMS from an extension that is not of type "User." In other words, only human beings can send SMS from phone numbers that are assigned to them. Knowing this, the solution should become relatively intuitive. 
+
+1. First, you will need to reconfigure the call queue extension and re-assign the phone number to a User extension. 
+2. Next, login to the [RingCentral App](https://app.ringcentral.com) as the user who you assigned the phone number to. Navigate to Settings > Phone > Call rules and voicemail. 
+3. Click "Add Rule" then "Create Custom Rule." Give the rule a name.
+4. Under "Calling me at" select the call queue's phone number. Click Next. 
+5. Click "Choose routing option" and select "Forward the call." Then forward the call to the call queue. 
+
+Once you have configured your call queue to receive calls in this way, then people who call the designated phone numbers will be routed to the queue. But now, any SMS sent to that phone number can be setup in Automator to both send and receive SMS. 
+
 ### How can I set up an automatic SMS reply when a user presses a key on the IVR menu?
 
 To achieve this, begin by crafting an empty IVR menu within the RingCentral admin portal. Following this, modify your current IVR menu to redirect users to the newly established IVR menu when they press the designated key. Proceed by generating an advanced automation in Automator, utilizing the trigger "Call received," and configuring the action "send SMS" for the extension connected to the empty IVR menu. This seamless integration will enable the desired automatic SMS response when a key is pressed on the IVR menu.
