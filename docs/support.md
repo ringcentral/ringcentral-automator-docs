@@ -131,6 +131,16 @@ You can use "Copy team URL" feature in RingCentral Team Messaging, then you can 
 
 ## Using Automator
 
+### "Subscribe event error" when creating/enabling an automation
+
+Under certain circumstances when creating or enabling an automation, you may receive the following error:
+
+> Subscribe event error, please make sure you have permission for related resource.
+
+![Error while creating automation](./img/create-error.png){ style="max-width: 50%" }
+
+This error occurs for automations in which the extension the automation is associated with is deleted or assigned to another user. The error occurs because at the time the automation was created, the person creating the automation had access to the extension, and thus no error was generated. But at some point, the person who owns the automation loses access to that extension and thus is no longer permitted to receive events related to that extension. 
+
 ### Why can't I edit an automation?
 
 You can't edit an automation if it is enabled. Please disable the automation first, and then proceed to edit it.
