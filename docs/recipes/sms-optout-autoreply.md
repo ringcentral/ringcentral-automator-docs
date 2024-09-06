@@ -10,7 +10,7 @@ tags:
 # Acknowledge reciept of an opt-out or opt-in request via SMS
 
 !!! warning "**Opt-in and opt-out auto-replies is now supported in our core product**"
-    This recipe is provides for demonstration purposes only to illustrate a way of implementing auto-responses to specific keyworks. If you are in need of this specific feature we strongly recommend you setup your RingCentral account accordingly. 
+    This recipe is for demonstration purposes only and is meant to illustrate a way of implementing auto-responses to specific keywords. If you are in need of this specific feature we strongly recommend you setup your RingCentral account accordingly. 
 
 This automation is a good demonstration of how you can setup Automator to acknowledge the reciept of messages that contain specific keywords. It models the use case of sending SMS auto-replies in response to receiving specific commands or keywords. In addition, it demonstrates how to augment a contact record in RingCentral with a note to keep a record of the received correspondence. 
 
