@@ -52,6 +52,12 @@ What follows are a set of simple automations that you can think of as building b
   
     [:fontawesome-solid-download: Download](we-dont-accept-sms.json){: download }
 
+- [__SMS opt-in/out autoresponse__](sms-optout-autoreply.md)
+  
+    Reply to specific keywords to acknowledge receipt of specific opt-in/opt-out requests.
+  
+    [:fontawesome-solid-download: Download](sms-optout-autoreply.json){: download }
+
 - [__Triggering automations from IVR menus__](ivr-menus.md)
   
     Learn how you can trigger an automation when a user navigates an IVR menu.

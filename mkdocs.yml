@@ -72,7 +72,6 @@ nav:
   - 'Missed call auto-reply': workflow-templates/missed-call.md
   - 'Out-of-office auto-reply': workflow-templates/ooo-autoreplies.md
   - 'SMS help request': workflow-templates/help-request.md
-  - 'SMS opt-in/out auto-reply': workflow-templates/sms-optin-optout.md
   - 'Voicemail auto-reponse': workflow-templates/voicemail-autoresponse.md
   - 'Voicemail notification': workflow-templates/voicemail-notification.md
 - 'Custom workflows':
@@ -104,6 +103,7 @@ nav:
     - 'Missed call auto-response': recipes/missed-call.md
     - 'Non-user extension automations': recipes/extensions.md
     - 'Send auto-reply only once': recipes/autoreply-only-once.md
+    - 'SMS opt-in/out auto-reply': recipes/sms-optout-autoreply.md
     - 'Team Messaging OOO auto-reply': recipes/chat-ooo-autoreply.md
     - 'Triggering from IVR menus': recipes/ivr-menus.md
     - 'Unavailable auto-response': recipes/unavailable.md

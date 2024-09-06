@@ -4,5 +4,4 @@
 * [**After-hours auto-reply**](./after-hours.md). Let people know that you missed their call because they called during non-business hours. 
 * [**Voicemail auto-reponse**](./voicemail-autoresponse.md). Let a caller know you received their voicemail. 
 * [**Voicemail notification**](./voicemail-notification.md). Send yourself an SMS with a transcription of any incoming voicemail. 
-* [**SMS opt-in/out auto-reply**](./sms-optin-optout.md). Send a canned response when some requests to stop receiving SMS messages. 
 * [**SMS help request**](./help-request.md). Send a response when someone contacts you via SMS looking for help. 
