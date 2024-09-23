@@ -109,7 +109,7 @@ nav:
     - 'Unavailable auto-response': recipes/unavailable.md
     - 'Voicemail auto-response': recipes/voicemail-autoresponse.md
     - "We don't accept SMS auto-reponse": recipes/we-dont-accept-sms.md
-- 'Support and troubleshooting': support.md
+- 'Support and troubleshooting': https://community.ringcentral.com/groups/workflow-builder-23
 - 'About': about.md
 
 
