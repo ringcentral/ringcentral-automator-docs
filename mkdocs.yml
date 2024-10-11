@@ -10,6 +10,7 @@ docs_dir: docs
 
 theme:
   name: material
+  custom_dir: overrides
   features:
       - navigation.path
 #      - navigation.sections
@@ -53,8 +54,11 @@ plugins:
 markdown_extensions:
   - attr_list
   - md_in_html
-  - mdx_include
   - admonition
+  - mdx_include
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
        emoji_index: !!python/name:material.extensions.emoji.twemoji 
        emoji_generator: !!python/name:material.extensions.emoji.to_svg
