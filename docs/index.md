@@ -1,5 +1,10 @@
 # RingCentral Automator
 
+!!! warning "RingCentral Automator is becoming Workflow Builder"
+    Since January 9, 2023 Automator has executed over three million workflows, and has reached tens of thousands of RingCentral customers, helping them to automate common tasks, and even help [grow their businesses](https://www.ringcentral.com/whyringcentral/casestudies/saving-lives-society.html). The incubation period for this product is coming to an end, and soon, Automator will get a major upgrade and become the [RingCentral Workflow Builder](https://community.ringcentral.com/workflow-builder-23/automator-is-becoming-workflow-builder-9861). [Join the beta](https://docs.google.com/forms/d/e/1FAIpQLScH3nJMIW9DcaCk012Ba9VrzPk_zmSzuQTJgUML3L4tsBycng/viewform) today and get ready for the next major phase of phase of workflow automation at RingCentral.
+
+## What is RingCentral Automator?
+
 !!! tip inline end "Share your workflow"
     Have a workflow you love? Export and share it with the community as a [recipe](recipes/index.md).
 	
