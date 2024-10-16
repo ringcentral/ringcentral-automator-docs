@@ -1,6 +1,6 @@
 # Trigger: chat message received
 
-This event is fired when the current user receives a chat message via RingCentral's unified messaging app. 
+This event is fired when the current user receives a chat message via RingCentral's unified messaging app. Please note that this trigger is not fired when a user sends a message to themselves. 
 
 ## Trigger variables
 
