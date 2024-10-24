@@ -1,4 +1,4 @@
-## Testing and simulating workflows
+# Testing and simulating workflows
 
 To assist users in producing workflows that they are confident will address their needs and use cases in all their various forms, Workflow Builder allows users to test the workflow by simulating a triggering event. 
 

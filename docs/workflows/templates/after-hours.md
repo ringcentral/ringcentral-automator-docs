@@ -1,3 +1,11 @@
+---
+tags:
+  - template
+  - SMS
+  - time-based
+  - after-hours
+---
+
 # After-hours SMS auto-reply
 
 This workflow will help respond to SMS messages received outside of regular office hours. In the template you specify your company's office hours, or the time during which they will reply to messages. If any message is received outside of these specified hours, the specified message will be sent. 

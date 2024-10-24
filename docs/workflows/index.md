@@ -1,16 +1,18 @@
 ---
-title: RingCentral workflow templates
+title: Workflow Builder templates
 ---
 
-# Workflow templates
+# Workflow templates and recipes
+
+Both templates and recipes provide Workflow Builder users an easy way to get a new workflow up and running quickly. Templates are built-in to Workflow Builder and allow users to create and edit a workflow via a simple form. Recipes on the other hand are workflows that have been exported by another user and shared with the community. Recipes can be [imported](../users/import-export.md) into your account as a custom automation. 
+
+## Templates
 
 Workflow templates are pre-composed workflows designed around common use cases and situations. They provide users, especially less technical ones, with an intuitive and simple way to setup and configure common workflows. 
 
 Workflows created from a template only require users to fill out a simple form in order to create a new workflow. The same form can be used to edit the workflow as well. 
 
-To create a workflow from a template, navigate to any workflow listing screen, and click the "New workflow" button. This will surface a dialog of workflows to choose from. 
-
-### Templates
+To create a workflow from a template, navigate to "My workflows" or "Company workflows" (if you are an admin), and click the "New workflow" button. This will take you to a screen where you select a template to create a workflow from.
 
 <div class="grid cards" markdown>
 
@@ -40,7 +42,7 @@ To create a workflow from a template, navigate to any workflow listing screen, a
 
 </div>
 
-## Workflow Cookbook
+## Recipes
 
 !!! tip "Share your favorite workflow recipe with the community"
     We would love to learn more about your favorite workflow, and how it has positively impacted you. Please consider exporting your most useful recipe and sharing it with us, so that we can publish it and so that others might benefit from it as well. 
@@ -49,8 +51,6 @@ To create a workflow from a template, navigate to any workflow listing screen, a
 A number of our most common workflows that work right out-of-the-box are available via a [workflow template](#templates). Other workflows may be less common, but no less important. 
 
 What follows are a set of simple workflows that you can think of as building blocks. Each recipe can stand on its own, but can also be combined with other recipes to make highly customized workflows that more precisely meet your needs. Use recipes to learn how to solve common problems workflow designers may have. 
-
-### Recipes
 
 <div class="grid cards" markdown>
 

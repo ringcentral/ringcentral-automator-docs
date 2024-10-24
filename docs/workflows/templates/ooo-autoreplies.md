@@ -1,3 +1,10 @@
+---
+tags:
+  - template
+  - SMS
+  - out-of-office
+---
+
 # Out-of-office SMS replies
 
 This workflow template is intended to use temporarily while one is away from the office and unable to respond to incoming SMS messages. It is great solution when you are on holiday or ill. 

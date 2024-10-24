@@ -1,4 +1,4 @@
-# Creating your first workflow
+# Three ways to get started with Workflow Builder
 
 ## Create a workflow from a template
 
@@ -16,11 +16,11 @@ Workflow Builder provides two other ways to create a workflow, which is accessed
   <figcaption>Create a custom workflow or import a workflow</figcaption>
 </figure>
 
-### Import a workflow or recipe
+## Import a workflow or recipe
 
 Discover a variety of popular workflows in our catalog of [workflow recipes](../workflows/index.md#recipes). Some recipes provide a complete solution to common use case, like our [missed call auto-reply](../workflows/recipes/missed-call.md). Other recipes are helpful learning tools that can help you jump start the workflow creation process, like our recipe on how [trigger workflows from IVR menus](../workflows/recipes/ivr-menus.md). 
 
-### Create a custom workflow
+## Create a custom workflow
 
 The next way to create a workflow is via Workflow Builder's workflow designer, a visual drag-and-drop tool that allows users to define [custom workflows](../workflows/custom/index.md) using their own [logical rules](../workflows/custom/conditionals.md) and [actions](../workflows/custom/actions/index.md) for responding to certain events that can [trigger](../workflows/custom/triggers/index.md) a workflow to be executed. 
 

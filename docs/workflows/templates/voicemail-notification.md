@@ -1,3 +1,10 @@
+---
+tags:
+  - template
+  - SMS
+  - voicemail
+---
+
 # Voicemail received notification
 
 This workflow will help users stay up to date with people leaving them voicemail. Whenever a person receives a voicemail, a summary of the voicemail along with a transcription will be sent to the receipient of the voicemail. 

@@ -18,7 +18,7 @@ Custom workflows and workflows are intended for power-users who wish to define m
 
 ## Editing workflows
 
-### Adding and remove a node in a workflow
+### Adding and removing a node in a workflow
 
 Nodes are added to a workflow by clicking the "+" icon located between nodes. At any of these locations, conditionals and action nodes can be inserted. 
 
@@ -44,9 +44,9 @@ When adding an action, you will be given a chance to select from a list of avail
 !!! hint "Why are some action's disabled, or greyed-out?"
     From time to time you may find an action listed that is disabled and cannot be added to a workflow. This is due to the feature associated with that action not being abled for your account. The most common scenario for this are actions related to sending SMS because in order to send SMS messages, users must go through what is often a multi-step approval and setup process with RingCentral and carriers to fully enable SMS for an account. 
 
-## Customizing a workflow from a workflow template
+## Customizing a workflow template
 
-One of the most common ways used to create a workflow is to create a workflow from a template, and then customize it by converting it to an "advanced workflow." This has the advantage of starting from a place known to be fully tested and functional, and then customizing it sometimes in small, but impactful ways. It can save a lot of time from building a workflow from zero.
+One of the most common ways used to create a workflow is to create a workflow from a template, and then customize it by converting it to a "custom workflow." This has the advantage of starting from a place known to be fully tested and functional, and then customizing it sometimes in small, but impactful ways. It can save a lot of time from building a workflow from zero.
 
 <figure markdown>
   ![Converting a workflow to a custom workflow](../../img/convert-to-advanced.png){ style="max-width: 400px" }

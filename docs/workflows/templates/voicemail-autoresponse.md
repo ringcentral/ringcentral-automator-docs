@@ -1,3 +1,10 @@
+---
+tags:
+  - template
+  - SMS
+  - voicemail
+---
+
 # Voicemail auto-response
 
 This workflow will send an SMS to someone who leaves a voicemail confirming the receipt of a voicemail. You can optionally disable this workflow if the person who leaves the voicemail is a co-worker. 
