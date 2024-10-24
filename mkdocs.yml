@@ -1,5 +1,5 @@
 # Project information
-site_name: RingCentral Automator
+site_name: RingCentral's Workflow Builder
 site_url: https://github.com/ringcentral/ringcentral-automator-docs
 
 # Repository
@@ -11,9 +11,14 @@ docs_dir: docs
 theme:
   name: material
   custom_dir: overrides
+  font:
+    code: Roboto Mono
+    text: Inter Tight
   features:
       - navigation.path
-#      - navigation.sections
+      - navigation.sections
+      - navigation.expand
+      - navigation.tabs
       - search.sharing
       - search.highlight
   palette:
@@ -29,9 +34,6 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
-  font:
-    text: Roboto
-    code: Roboto Mono
 
 extra:
   social:
@@ -43,6 +45,7 @@ extra_css:
   - extra.css
 
 plugins:
+  - privacy
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - exclude:
@@ -67,53 +70,64 @@ copyright: "2023 RingCentral, Inc. All rights reserved."
 
 nav:
 - 'Home': index.md
-- 'User Guide': user-guide.md
-- 'Admin Guide': admin-guide.md
-- 'Workflow templates':
-  - 'Overview': workflow-templates/index.md
-  - 'After-hours auto-reply': workflow-templates/after-hours.md
-  - 'Keyword-based auto-reply': workflow-templates/keywords.md
-  - 'Missed call auto-reply': workflow-templates/missed-call.md
-  - 'Out-of-office auto-reply': workflow-templates/ooo-autoreplies.md
-  - 'SMS help request': workflow-templates/help-request.md
-  - 'Voicemail auto-reponse': workflow-templates/voicemail-autoresponse.md
-  - 'Voicemail notification': workflow-templates/voicemail-notification.md
+- 'User Guide':
+  - 'Getting started': users/index.md
+  - 'Importing/exporting workflows': users/import-export.md
+  - 'Customizing templates': users/customization.md
+  - 'Limiting workflow frequencies': users/frequency.md
+  - 'Enabling/disabling': users/enablement.md
+  - 'Histories': users/history.md
+  - 'Simulation': users/simulation.md
+  - 'Variables and text substitution': users/text-substitution.md
+- 'Admin Guide':
+  - 'Becoming an admin': admin/index.md
+  - 'Managing user workflows': admin/manage.md
+  - 'Non-user workflows': admin/non-users.md
+  - 'Copying workflows': admin/copying.md
+  - 'Managing workflow runners': admin/runners.md
+- 'Templates & Recipes':
+  - 'Overview': workflows/index.md
+  - 'Templates': 
+    - 'After-hours auto-reply': workflows/templates/after-hours.md
+    - 'Keyword-based auto-reply': workflows/templates/keywords.md
+    - 'Out-of-office auto-reply': workflows/templates/ooo-autoreplies.md
+    - 'SMS help request': workflows/templates/help-request.md
+    - 'Voicemail auto-reponse': workflows/templates/voicemail-autoresponse.md
+    - 'Voicemail notification': workflows/templates/voicemail-notification.md
+  - 'Recipes':
+    - 'Missed call auto-response': workflows/recipes/missed-call.md
+    - 'Non-user extension automations': workflows/recipes/extensions.md
+    - 'Send auto-reply only once': workflows/recipes/autoreply-only-once.md
+    - 'SMS opt-in/out auto-reply': workflows/recipes/sms-optout-autoreply.md
+    - 'Team Messaging OOO auto-reply': workflows/recipes/chat-ooo-autoreply.md
+    - 'Triggering from IVR menus': workflows/recipes/ivr-menus.md
+    - 'Unavailable auto-response': workflows/recipes/unavailable.md
+    - 'Voicemail auto-response': workflows/recipes/voicemail-autoresponse.md
+    - "We don't accept SMS auto-reponse": workflows/recipes/we-dont-accept-sms.md
 - 'Custom workflows':
-  - 'Overview': custom-workflows/index.md
-  - 'Flow control': custom-workflows/conditionals.md
-  - 'Variables': custom-workflows/variables.md
+  - 'Overview': workflows/custom/index.md
+  - 'Flow control': workflows/custom/conditionals.md
+  - 'Variables': workflows/custom/variables.md
   - 'Triggers': 
-    - 'Overview': custom-workflows/triggers/index.md
-    - 'Call ended': custom-workflows/triggers/call-ended.md
-    - 'Call missed': custom-workflows/triggers/call-missed.md
-    - 'Call received': custom-workflows/triggers/call-received.md
-    - 'Chat message received': custom-workflows/triggers/chat-message-received.md
-    - 'SMS received': custom-workflows/triggers/sms-received.md
-    - 'Voicemail received': custom-workflows/triggers/voicemail-received.md
+    - 'Overview': workflows/custom/triggers/index.md
+    - 'Call ended': workflows/custom/triggers/call-ended.md
+    - 'Call missed': workflows/custom/triggers/call-missed.md
+    - 'Call received': workflows/custom/triggers/call-received.md
+    - 'Chat message received': workflows/custom/triggers/chat-message-received.md
+    - 'SMS received': workflows/custom/triggers/sms-received.md
+    - 'Voicemail received': workflows/custom/triggers/voicemail-received.md
   - 'Actions':
-    - 'Overview': custom-workflows/actions/index.md
-    - 'Comment': custom-workflows/actions/comment.md
-    - 'Create personal contact': custom-workflows/actions/create-contact.md
-    - 'Create meeting bridge': custom-workflows/actions/create-meeting.md
-    - 'Exit': custom-workflows/actions/exit.md
-    - 'Lookup contact': custom-workflows/actions/lookup-contact.md
-    - 'Place call': custom-workflows/actions/ringout.md
-    - 'Send chat message': custom-workflows/actions/send-chat-message.md
-    - 'Send SMS': custom-workflows/actions/send-sms.md
-    - 'Send HTTP request': custom-workflows/actions/http-request.md
-    - 'Transcribe media file': custom-workflows/actions/transcribe.md
-- 'Recipes':
-    - 'Overview': recipes/index.md
-    - 'Missed call auto-response': recipes/missed-call.md
-    - 'Non-user extension automations': recipes/extensions.md
-    - 'Send auto-reply only once': recipes/autoreply-only-once.md
-    - 'SMS opt-in/out auto-reply': recipes/sms-optout-autoreply.md
-    - 'Team Messaging OOO auto-reply': recipes/chat-ooo-autoreply.md
-    - 'Triggering from IVR menus': recipes/ivr-menus.md
-    - 'Unavailable auto-response': recipes/unavailable.md
-    - 'Voicemail auto-response': recipes/voicemail-autoresponse.md
-    - "We don't accept SMS auto-reponse": recipes/we-dont-accept-sms.md
-- 'Support and troubleshooting': https://community.ringcentral.com/groups/workflow-builder-23
-- 'About': about.md
+    - 'Overview': workflows/custom/actions/index.md
+    - 'Comment': workflows/custom/actions/comment.md
+    - 'Create personal contact': workflows/custom/actions/create-contact.md
+    - 'Create meeting bridge': workflows/custom/actions/create-meeting.md
+    - 'Exit': workflows/custom/actions/exit.md
+    - 'Lookup contact': workflows/custom/actions/lookup-contact.md
+    - 'Place call': workflows/custom/actions/ringout.md
+    - 'Send chat message': workflows/custom/actions/send-chat-message.md
+    - 'Send SMS': workflows/custom/actions/send-sms.md
+    - 'Send HTTP request': workflows/custom/actions/http-request.md
+    - 'Transcribe media file': workflows/custom/actions/transcribe.md
+- 'Support': https://community.ringcentral.com/groups/workflow-builder-23
 
 
