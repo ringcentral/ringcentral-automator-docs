@@ -80,6 +80,7 @@ nav:
   - 'Histories': users/history.md
   - 'Simulation': users/simulation.md
   - 'Variables and text substitution': users/text-substitution.md
+  - 'Custom workflows': workflows/custom/index.md
 - 'Admin Guide':
   - 'Becoming an admin': admin/index.md
   - 'Managing user workflows': admin/manage.md
@@ -105,8 +106,7 @@ nav:
     - 'Unavailable auto-response': workflows/recipes/unavailable.md
     - 'Voicemail auto-response': workflows/recipes/voicemail-autoresponse.md
     - "We don't accept SMS auto-reponse": workflows/recipes/we-dont-accept-sms.md
-- 'Custom workflows':
-  - 'Overview': workflows/custom/index.md
+- 'Reference':
   - 'Flow control': workflows/custom/conditionals.md
   - 'Variables': workflows/custom/variables.md
   - 'Triggers': 

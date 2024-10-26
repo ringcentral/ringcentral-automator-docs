@@ -8,7 +8,7 @@ Workflow Builder allows for admins to create workflows on behalf of others. Thes
 
 Workflow Builder allows only Super Admins to modify the runner of a workflow associated with a user in their account. This is done either by editing the workflow template, or by editing the trigger associated with an advanced workflow. 
 
-![admin options](../img/admin-options.png)
+![Modifying the workflow runner](../img/workflow-runner.png)
 
 Admins can set the runner of a workflow according to the following constraints:
 
