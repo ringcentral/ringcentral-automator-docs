@@ -1,6 +1,36 @@
 #ringcentral-automator + .admonition {
     font-size: 0.75rem;
 }
+.home-hero {
+    background-color: #F0EFEB;
+    background-image: url(img/community-hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    padding-bottom: 20px;
+}
+.home-hero .inner {
+    background-image: url(img/RingCentral_logo_color.png);
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: bottom;
+    background-origin: padding-box;
+    background-size: 130px;
+    padding: 20px;
+}
+.home-hero h1 {
+    font-weight: 900;
+    font-size: 2.25rem;
+    margin-top: 9px;
+    margin-bottom: 1px;
+    color: black;
+}
+.home-hero h2 {
+    margin-top: 0em;
+}
+.intro {
+    font-size: 1.1rem;
+}
 .md-banner {
     text-align: center;
     font-weight: bold;

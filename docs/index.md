@@ -1,15 +1,24 @@
 ---
 hide:
   - navigation
+title: RingCentral's Workflow Builder - an SMS automation tool
 ---
-# RingCentral's Workflow Builder
 
-!!! warning "RingCentral Automator is becoming Workflow Builder"
+!!! info "RingCentral Automator is becoming Workflow Builder"
     Since January 9, 2023 [Automator](https://automator.labs.ringcentral.com/) has executed over three million workflows, and has reached tens of thousands of RingCentral customers, helping them to automate common tasks, and even help [grow their businesses](https://www.ringcentral.com/whyringcentral/casestudies/saving-lives-society.html). The incubation period for this product is coming to an end, and soon, Automator will get a major upgrade and become [Workflow Builder](https://community.ringcentral.com/workflow-builder-23/automator-is-becoming-workflow-builder-9861). 
     
 	[Join the beta](https://docs.google.com/forms/d/e/1FAIpQLScH3nJMIW9DcaCk012Ba9VrzPk_zmSzuQTJgUML3L4tsBycng/viewform) today and get ready for the next major phase of phase of workflow automation at RingCentral.
 
-Welcome to RingCentral's Workflow Builder, a no-code workflow design tool created to help RingCentral customers automate common tasks and workflows, as well as design their own custom workflows to address use cases not solved by one of our pre-existing [workflow templates](./workflows/index.md). 
+<div class="home-hero">
+<div class="inner" markdown>
+<h1>Workflow Builder</h1>
+<h2>Automate SMS, voice, team chat, and more</h2>
+</div>
+</div>
+
+<div class="intro" markdown>
+Welcome to RingCentral's Workflow Builder, a no-code workflow design tool created to help RingCentral customers automate common tasks using templated and custom workflows.
+</div>
 
 ## Getting started using Workflow Builder
 

@@ -31,7 +31,7 @@ For Call Queue, Voicemail, IvrMenu and Park Location extension types, workflows 
 
 Administrators have the ability to specify another user to run a workflow on behalf of. This may give one workflow access to features and phone numbers they might otherwise not have access to. This is especially helpful you want to receive an SMS from one phone number, and respond to the SMS from another phone number, or sending SMS from the main company number. 
 
-* Learn more about modifying the [runner of a workflow](runner.md)
+* Learn more about modifying the [runner of a workflow](runners.md)
 
 ## Not all events fire for all extension types
 

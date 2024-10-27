@@ -6,9 +6,9 @@ Importing and exporting workflows provides users with a convenient way to share 
 
 Once a custom workflow has been designed, built, and tested, you can share the workflow with others on your team, or with the larger RingCentral [Workflow Builder community](https://community.ringcentral.com/groups/workflow-builder-23). To share a workflow, export the workflow to a file, send the file to a coworker, and invite them to import the file. To export a workflow:
 
-1. If you are starting from a template, convert the workflow to a custom workflow
-2. Edit and customize the workflow
-3. From the More menu, select "Export as a JSON file"
+1. If you are starting from a template, [convert the workflow to a custom workflow](customization.md)
+2. Edit and [customize the workflow](../workflows/custom/index.md)
+3. From the "More" menu, select "Export as a JSON file"
       
       ![Menu to export a workflow](../img/export.png){style="max-width: 500px"}
 	  

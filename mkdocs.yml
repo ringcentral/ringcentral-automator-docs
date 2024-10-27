@@ -107,10 +107,11 @@ nav:
     - 'Voicemail auto-response': workflows/recipes/voicemail-autoresponse.md
     - "We don't accept SMS auto-reponse": workflows/recipes/we-dont-accept-sms.md
 - 'Reference':
+  - 'Triggers': workflows/custom/triggers/index.md
+  - 'Actions': workflows/custom/actions/index.md
   - 'Flow control': workflows/custom/conditionals.md
   - 'Variables': workflows/custom/variables.md
   - 'Triggers': 
-    - 'Overview': workflows/custom/triggers/index.md
     - 'Call ended': workflows/custom/triggers/call-ended.md
     - 'Call missed': workflows/custom/triggers/call-missed.md
     - 'Call received': workflows/custom/triggers/call-received.md
@@ -118,7 +119,6 @@ nav:
     - 'SMS received': workflows/custom/triggers/sms-received.md
     - 'Voicemail received': workflows/custom/triggers/voicemail-received.md
   - 'Actions':
-    - 'Overview': workflows/custom/actions/index.md
     - 'Comment': workflows/custom/actions/comment.md
     - 'Create personal contact': workflows/custom/actions/create-contact.md
     - 'Create meeting bridge': workflows/custom/actions/create-meeting.md
