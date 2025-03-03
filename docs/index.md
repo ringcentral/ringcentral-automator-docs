@@ -1,6 +1,7 @@
 ---
 hide:
   - navigation
+  - toc
 title: RingCentral's Workflow Builder - an SMS automation tool
 ---
 
@@ -11,6 +12,23 @@ title: RingCentral's Workflow Builder - an SMS automation tool
 !!! info "RingCentral Automator is becoming Workflow Builder - [Learn more](https://community.ringcentral.com/workflow-builder-23/automator-is-becoming-workflow-builder-9861)"
 -->
 
+<div class="qs-hero" markdown>
+<div class="carousel container">
+  <h2>Automate SMS and more with Workflow Builder</h2>
+  <div class="row">
+    <div class="column">
+      <img src="./img/workflow-designer-exerpt.png" class="d-block mx-lg-auto img-fluid" alt="RingCentral Workflow Builder" loading="lazy">
+    </div>
+    <div class="column">
+      <p>Welcome to RingCentral's Workflow Builder, a no-code workflow design tool created to help RingCentral customers automate common tasks using templated and custom workflows.</p>
+	  <p>Explore <a href="workflows/">existing templates</a>, or build your own <a href="workflows/custom/">custom workflow</a> to meet your exact needs.</p>
+      <a class="md-button md-button--primary" href="users/">Get started</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--
 <div class="home-hero">
 <div class="inner" markdown>
 <h1>Workflow Builder</h1>
@@ -21,6 +39,7 @@ title: RingCentral's Workflow Builder - an SMS automation tool
 <div class="intro" markdown>
 Welcome to RingCentral's Workflow Builder, a no-code workflow design tool created to help RingCentral customers automate common tasks using templated and custom workflows.
 </div>
+-->
 
 ## Getting started using Workflow Builder
 
