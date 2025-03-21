@@ -22,7 +22,7 @@ title: RingCentral's Workflow Builder - an SMS automation tool
     <div class="column">
       <p>Welcome to RingCentral's Workflow Builder, a no-code workflow design tool created to help RingCentral customers automate common tasks using templated and custom workflows.</p>
 	  <p>Explore <a href="workflows/">existing templates</a>, or build your own <a href="workflows/custom/">custom workflow</a> to meet your exact needs.</p>
-      <a class="md-button md-button--primary" href="https://vimeo.com/1067058988">Watch video</a> <a class="md-button md-button--secondary" href="users/">Get started</a>
+      <a class="md-button md-button--primary" href="https://vimeo.com/1067058988" target="_new">Watch video</a> <a class="md-button md-button--secondary" href="users/">Get started</a>
     </div>
   </div>
 </div>
