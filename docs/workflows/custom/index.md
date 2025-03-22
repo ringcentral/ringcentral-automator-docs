@@ -9,6 +9,8 @@ title: Creating custom workflows using Workflow Builder
 	
 	[Share your recipe via Github &raquo;](https://github.com/ringcentral/ringcentral-automator-docs/issues/new)
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1068338741?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Unleash the Automation Power of RingCentral Workflow Builder by Creating Custom Workflows from Scratch"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 Custom workflows and workflows are intended for power-users who wish to define more complex logic, rules and conditions than Workflow Builder's ready-made templates may provide out of the box. While it is the goal of Workflow Builder to enable any user to create a custom workflow, some may wish to enlist the help of someone more technical to consult on the creation of a custom workflow, especially if the creation of rules and specification of actions is something they are not comfortable with. 
 
 <figure markdown>
