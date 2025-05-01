@@ -116,6 +116,7 @@ nav:
     - 'Call missed': workflows/custom/triggers/call-missed.md
     - 'Call received': workflows/custom/triggers/call-received.md
     - 'Chat message received': workflows/custom/triggers/chat-message-received.md
+    - 'Fax received': workflows/custom/triggers/fax-received.md
     - 'SMS received': workflows/custom/triggers/sms-received.md
     - 'Voicemail received': workflows/custom/triggers/voicemail-received.md
   - 'Actions':
