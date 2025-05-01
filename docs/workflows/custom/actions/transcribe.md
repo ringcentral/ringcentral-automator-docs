@@ -2,6 +2,8 @@
 
 Given a media file that lives at an internet-accessible URL, generates a transcription and summary of the media file's contents. 
 
+!!! warning "This action is currently only available in Automator."
+
 ## Authentication with the media URL
 
 The system being interfaced with to access a media file must allow all authentication to happen via the URL, as one cannot customize the HTTP headers and other low-level aspects of the connection. 
