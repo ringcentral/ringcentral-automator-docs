@@ -100,6 +100,7 @@ nav:
     - 'Missed call auto-response': workflows/recipes/missed-call.md
     - 'Non-user extension automations': workflows/recipes/extensions.md
     - 'Send auto-reply only once': workflows/recipes/autoreply-only-once.md
+    - 'Send SMS from a call queue': workflows/recipes/send-from-call-queue.md
     - 'SMS opt-in/out auto-reply': workflows/recipes/sms-optout-autoreply.md
     - 'Team Messaging OOO auto-reply': workflows/recipes/chat-ooo-autoreply.md
     - 'Triggering from IVR menus': workflows/recipes/ivr-menus.md

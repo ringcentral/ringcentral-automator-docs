@@ -96,6 +96,18 @@ What follows are a set of simple workflows that you can think of as building blo
   
     [:fontawesome-solid-download: Download](recipes/sms-optout-autoreply.json){: download }
 
+</div>
+
+### Tips and tricks
+
+While not recipes you can download and install, these articles address common needs from customers. 
+
+<div class="grid cards" markdown>
+
+- [__Send SMS from a call queue__](recipes/send-from-call-queue.md)
+  
+    Send an SMS from a call queue's phone number. 
+  
 - [__Triggering workflows from IVR menus__](recipes/ivr-menus.md)
   
     Learn how you can trigger a workflow when a user navigates an IVR menu.
