@@ -1,0 +1,15 @@
+<details id="make-ringout-call">
+  <summary>Make RingOut call</summary>
+
+Initiates a phone call between two parties using the RingOut protocol. The RingOut protocol works by calling the caller. When the caller answers the phone, the other party to the phone call is called. When that person answers, the two parties are connected. 
+
+**Input**
+
+* **Originating phone number**. The phone number of the caller. 
+* **Recipient phone number**. The phone number of the callee, or recipient of the caller's call. 
+* **Prompt before connecting calls**. An option to prompt the caller to press "1" prior to calling the caller. 
+
+**Output**
+
+None.
+</details>
