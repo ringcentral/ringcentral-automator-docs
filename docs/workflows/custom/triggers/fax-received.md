@@ -2,6 +2,32 @@
 
 This event is fired when the current user receives a fax via any of the phone numbers they have access to. 
 
+## Viewing Fax Content
+
+When a fax is sent or received, the associated trigger event includes a variable named Fax attachment URI. This variable provides a direct URL to the fax message media.
+
+### Direct Media Access
+
+The Fax attachment URI variable contains the raw URL to the fax media file. For example:
+
+> https://media.ringcentral.com/restapi/v1.0/account/170xxx004/recording/6571972004/content
+
+You can use this URL to directly access the fax content, which is typically in a format like TIFF.
+
+### Constructing a Viewable URL
+
+To provide a user-friendly way to view the fax content directly in a web browser, you can construct a special URL using the RingCentral Media Reader. This reader is a web-based tool that can interpret and display various media types, including faxes.
+
+To construct a viewable URL, prepend the Fax attachment URI with the RingCentral Media Reader URL:
+
+> https://ringcentral.github.io/ringcentral-media-reader/index.html?media=
+
+Combining this with the Fax attachment URI results in a clickable URL like this:
+
+> https://ringcentral.github.io/ringcentral-media-reader/index.html?media=https://media.ringcentral.com/restapi/v1.0/account/170xxx004/recording/6571972004/content
+
+By providing users with such a URL, they can easily click to open and view the fax content within their browser.
+
 ## Trigger variables
 
 | Trigger variable | Type | Description |
