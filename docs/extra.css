@@ -114,6 +114,11 @@
     color: #066fac;
     text-decoration: underline;
 }
+
+.triggers .icon-trigger {
+    margin-right: 10px;
+}
+
 :root {
     --md-primary-fg-color: #002755;
 }

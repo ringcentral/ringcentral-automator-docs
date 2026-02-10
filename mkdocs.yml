@@ -119,6 +119,8 @@ nav:
     - 'Chat message received': workflows/custom/triggers/chat-message-received.md
     - 'Fax received': workflows/custom/triggers/fax-received.md
     - 'Fax sent': workflows/custom/triggers/fax-sent.md
+    - 'On-demand': workflows/custom/triggers/on-demand.md
+    - 'Scheduled': workflows/custom/triggers/scheduled.md
     - 'SMS received': workflows/custom/triggers/sms-received.md
     - 'Voicemail received': workflows/custom/triggers/voicemail-received.md
   - 'Actions':

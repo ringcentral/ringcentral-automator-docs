@@ -4,12 +4,21 @@ The creation of all [custom workflows](./index.md) begin by selecting the event 
 
 ## Index of all triggers
 
-* [Call missed](call-missed.md)
-* [Call ended](call-ended.md)
-* [Call received](call-received.md)
-* [Chat message received](chat-message-received.md)
-* [SMS received](sms-received.md)
-* [Voicemail received](voicemail-received.md)
+<div class="grid cards triggers" markdown>
+
+- ![Missed call icon](../../../img/icon-call-missed.png){ .icon-trigger } __[Call missed](call-missed.md)__
+- ![Missed call icon](../../../img/icon-call-ended.png){ .icon-trigger } __[Call ended](call-ended.md)__
+- ![Missed call icon](../../../img/icon-call-received.png){ .icon-trigger } __[Call received](call-received.md)__
+- ![Missed call icon](../../../img/icon-chat-message-received.png){ .icon-trigger } __[Chat message received](chat-message-received.md)__
+- ![Missed call icon](../../../img/icon-fax-received.png){ .icon-trigger } __[Fax received](fax-received.md)__
+- ![Missed call icon](../../../img/icon-fax-sent.png){ .icon-trigger } __[Fax sent](fax-sent.md)__
+- ![Missed call icon](../../../img/icon-on-demand.png){ .icon-trigger } __[On-demand](on-demand.md)__
+- ![Missed call icon](../../../img/icon-scheduled.png){ .icon-trigger } __[Scheduled](scheduled.md)__
+- ![Missed call icon](../../../img/icon-sms-received.png){ .icon-trigger } __[SMS received](sms-received.md)__
+- ![Missed call icon](../../../img/icon-voicemail-received.png){ .icon-trigger } __[Voicemail received](voicemail-received.md)__
+
+</div>
+
 
 ## Limiting the frequency of a workflow
 
