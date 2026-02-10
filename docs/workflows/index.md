@@ -96,6 +96,12 @@ What follows are a set of simple workflows that you can think of as building blo
   
     [:fontawesome-solid-download: Download](recipes/sms-optout-autoreply.json){: download }
 
+- [__Forward all SMS__](recipes/forward-sms.md)
+  
+    Send a copy of all incoming SMS to another phone number. 
+  
+    [:fontawesome-solid-download: Download](recipes/forward-sms.json){: download }
+
 </div>
 
 ### Tips and tricks

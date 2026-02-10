@@ -99,6 +99,7 @@ nav:
   - 'Recipes':
     - 'Missed call auto-response': workflows/recipes/missed-call.md
     - 'Non-user extension automations': workflows/recipes/extensions.md
+    - 'Forward all SMS': workflows/recipes/forward-sms.md
     - 'Send auto-reply only once': workflows/recipes/autoreply-only-once.md
     - 'Send SMS from a call queue': workflows/recipes/send-from-call-queue.md
     - 'SMS opt-in/out auto-reply': workflows/recipes/sms-optout-autoreply.md
