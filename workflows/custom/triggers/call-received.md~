@@ -1,0 +1,16 @@
+### Call received
+
+This event is fired when the current user receives a phone call at any of the phone numbers or extensions for which they are assigned or associated. 
+
+**Variables added to automation context**
+
+* **Call session ID**.
+* **Call telephony session ID**.
+* **Caller phone number**.
+* **Caller name**.
+* **Recipient phone number**.
+* **Recipient name**.
+* **Message received date**.
+* **Message received time**.
+* **Message received day of week**.
+

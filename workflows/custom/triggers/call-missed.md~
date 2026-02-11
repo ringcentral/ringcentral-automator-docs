@@ -1,0 +1,20 @@
+### Call missed
+
+This event is fired when a call comes into an extension, but is never answered or picked up. 
+
+* Voicemail-only extensions do not fire the missed call event, because no call that comes into a voicemail extension is ever missed - they are instantly picked up and a voicemail message is played. 
+* Call queues fire the missed call event when a user hangs up while waiting for someone to answer. 
+* Some call queues are configured to transfer unanswered calls to another extension, like a voicemail box. If this is the case for you, then the missed call event will not be fired for these calls. 
+
+**Variables added to automation context**
+
+* **Call session ID**.
+* **Call telephony session ID**.
+* **Call direction**. Possible values: Inbound and Outbound.
+* **Caller phone number**.
+* **Caller name**.
+* **Recipient phone number**.
+* **Recipient name**.
+* **Call ended date**.
+* **Call ended time**.
+* **Call ended day of week**.
