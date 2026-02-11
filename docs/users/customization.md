@@ -20,7 +20,7 @@ Upon completing the above steps you will be taken to the workflow designer for t
 
 While users do not need to know how to program in order to edit an advanced workflow, they do require users to be comfortable with simple concepts, such as:
 
-* Controlling the flow of a workflow using [conditionals](../workflows/custom/conditionals.md)
+* Controlling the flow of a workflow using [conditionals](../workflows/custom/flow/index.md)
 * Specifying when workflows should run by customizing the workflow's [triggering event](../workflows/custom/triggers/index.md)
 * Chaining [actions](../workflows/custom/actions/index.md) together to perform desired operations
 

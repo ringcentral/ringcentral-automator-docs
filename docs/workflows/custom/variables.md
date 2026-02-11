@@ -32,6 +32,18 @@ Variables can be referenced in any text field within Workflow Builder. They are 
 
 If you do not know the exact name of the variable you are looking for, type a "#" (pound-sign) into any text box and small help popup will appear to help you select the right one. 
 
+### Setting variables
+
+Variables are often created implicitly by a node. In some circumstances a workflow designer may wish to explicitly declare/create variable on their own. The following nodes enable this. 
+
+<div class="grid cards actions" markdown>
+
+- ![icon](../../img/icon-action-parse-json.png){ .icon-node } __[Parse JSON](actions/parse-json.md)__
+- ![icon](../../img/icon-action-set-variable.png){ .icon-node } __[Set variable](actions/set-variable.md)__
+
+</div>
+
+<!--
 ### Liquid templating language
 
 Workflow Builder uses the [Liquid templating language](https://shopify.github.io/liquid/) for referring to and manipulating variables. The Liquid language is a more advanced feature that gives users the ability to transform variable content, or conditionally display content according to your needs. 
@@ -45,6 +57,7 @@ Here are some examples of the kinds of things the Liquid language enables:
 * [Find and replace strings](https://shopify.github.io/liquid/filters/replace/)
 * [Force text to uppercase](https://shopify.github.io/liquid/filters/upcase/)
 * See the [Liquid templating language](https://shopify.github.io/liquid/) for a full list
+-->
 
 <!--
 #### Conditional logic using Liquid

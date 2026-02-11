@@ -110,8 +110,8 @@ nav:
     - "We don't accept SMS auto-reponse": workflows/recipes/we-dont-accept-sms.md
 - 'Reference':
   - 'Triggers': workflows/custom/triggers/index.md
+  - 'Flow control': workflows/custom/flow/index.md
   - 'Actions': workflows/custom/actions/index.md
-  - 'Flow control': workflows/custom/conditionals.md
   - 'Variables': workflows/custom/variables.md
   - 'Triggers': 
     - 'Call ended': workflows/custom/triggers/call-ended.md
@@ -124,17 +124,26 @@ nav:
     - 'Scheduled': workflows/custom/triggers/scheduled.md
     - 'SMS received': workflows/custom/triggers/sms-received.md
     - 'Voicemail received': workflows/custom/triggers/voicemail-received.md
+  - 'Flow control':
+    - 'If': workflows/custom/flow/if.md
+#    - 'Exit': workflows/custom/flow/exit.md
+#    - 'Repeat for each': workflows/custom/flow/foreach.md
+#    - 'Repeat while': workflows/custom/flow/while.md
+    - 'Switch': workflows/custom/flow/switch.md
   - 'Actions':
     - 'Comment': workflows/custom/actions/comment.md
     - 'Create personal contact': workflows/custom/actions/create-contact.md
     - 'Create meeting bridge': workflows/custom/actions/create-meeting.md
     - 'Exit': workflows/custom/actions/exit.md
     - 'Lookup contact': workflows/custom/actions/lookup-contact.md
+    - 'Parse JSON': workflows/custom/actions/parse-json.md
     - 'Place call': workflows/custom/actions/ringout.md
     - 'Send chat message': workflows/custom/actions/send-chat-message.md
     - 'Send SMS': workflows/custom/actions/send-sms.md
     - 'Send HTTP request': workflows/custom/actions/http-request.md
+    - 'Set variable': workflows/custom/actions/set-variable.md
     - 'Transcribe media file': workflows/custom/actions/transcribe.md
+    - 'Update personal contact': workflows/custom/actions/update-contact.md
 - 'Support': https://community.ringcentral.com/groups/workflow-builder-23
 
 

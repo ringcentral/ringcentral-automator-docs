@@ -6,16 +6,16 @@ The creation of all [custom workflows](./index.md) begin by selecting the event 
 
 <div class="grid cards triggers" markdown>
 
-- ![Missed call icon](../../../img/icon-call-missed.png){ .icon-trigger } __[Call missed](call-missed.md)__
-- ![Missed call icon](../../../img/icon-call-ended.png){ .icon-trigger } __[Call ended](call-ended.md)__
-- ![Missed call icon](../../../img/icon-call-received.png){ .icon-trigger } __[Call received](call-received.md)__
-- ![Missed call icon](../../../img/icon-chat-message-received.png){ .icon-trigger } __[Chat message received](chat-message-received.md)__
-- ![Missed call icon](../../../img/icon-fax-received.png){ .icon-trigger } __[Fax received](fax-received.md)__
-- ![Missed call icon](../../../img/icon-fax-sent.png){ .icon-trigger } __[Fax sent](fax-sent.md)__
-- ![Missed call icon](../../../img/icon-on-demand.png){ .icon-trigger } __[On-demand](on-demand.md)__
-- ![Missed call icon](../../../img/icon-scheduled.png){ .icon-trigger } __[Scheduled](scheduled.md)__
-- ![Missed call icon](../../../img/icon-sms-received.png){ .icon-trigger } __[SMS received](sms-received.md)__
-- ![Missed call icon](../../../img/icon-voicemail-received.png){ .icon-trigger } __[Voicemail received](voicemail-received.md)__
+- ![Missed call icon](../../../img/icon-call-missed.png){ .icon-node } __[Call missed](call-missed.md)__
+- ![Call ended icon](../../../img/icon-call-ended.png){ .icon-node } __[Call ended](call-ended.md)__
+- ![Call received icon](../../../img/icon-call-received.png){ .icon-node } __[Call received](call-received.md)__
+- ![Chat message received icon](../../../img/icon-chat-message-received.png){ .icon-node } __[Chat message received](chat-message-received.md)__
+- ![Fax received icon](../../../img/icon-fax-received.png){ .icon-node } __[Fax received](fax-received.md)__
+- ![Fax sent icon](../../../img/icon-fax-sent.png){ .icon-node } __[Fax sent](fax-sent.md)__
+- ![On-demand icon](../../../img/icon-on-demand.png){ .icon-node } __[On-demand](on-demand.md)__
+- ![Scheduled workflow icon](../../../img/icon-scheduled.png){ .icon-node } __[Scheduled](scheduled.md)__
+- ![SMS received icon](../../../img/icon-sms-received.png){ .icon-node } __[SMS received](sms-received.md)__
+- ![Voicemail received icon](../../../img/icon-voicemail-received.png){ .icon-node } __[Voicemail received](voicemail-received.md)__
 
 </div>
 

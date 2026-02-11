@@ -115,7 +115,9 @@
     text-decoration: underline;
 }
 
-.triggers .icon-trigger {
+.flows .icon-node,
+.actions .icon-node,
+.triggers .icon-node {
     margin-right: 10px;
 }
 

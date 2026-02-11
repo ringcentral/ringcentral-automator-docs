@@ -57,7 +57,7 @@ One of the most common ways used to create a workflow is to create a workflow fr
 
 ## Building a custom workflow from scratch
 
-Sometimes there is no template that serves as a good starting point. When this happen, you can start with a blank canvas by clicking "New workflow" and selecting the "Build your own workflow" option. You will then be prompted to select the triggering event, and then you will be taken a blank workflow into which you can begin adding [actions](./actions/index.md) and [conditionals](./conditionals.md).
+Sometimes there is no template that serves as a good starting point. When this happen, you can start with a blank canvas by clicking "New workflow" and selecting the "Build your own workflow" option. You will then be prompted to select the triggering event, and then you will be taken a blank workflow into which you can begin adding [actions](./actions/index.md) and [conditionals](./flow/index.md).
 
 <figure markdown>
   ![Build a custom workflow](../../img/build-your-own.png){ style="max-width: 300px" }

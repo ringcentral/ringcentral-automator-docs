@@ -24,5 +24,5 @@ Discover a variety of popular workflows in our catalog of [workflow recipes](../
 
 ## Create a custom workflow
 
-The next way to create a workflow is via Workflow Builder's workflow designer, a visual drag-and-drop tool that allows users to define [custom workflows](../workflows/custom/index.md) using their own [logical rules](../workflows/custom/conditionals.md) and [actions](../workflows/custom/actions/index.md) for responding to certain events that can [trigger](../workflows/custom/triggers/index.md) a workflow to be executed. 
+The next way to create a workflow is via Workflow Builder's workflow designer, a visual drag-and-drop tool that allows users to define [custom workflows](../workflows/custom/index.md) using their own [logical rules](../workflows/custom/flow/index.md) and [actions](../workflows/custom/actions/index.md) for responding to certain events that can [trigger](../workflows/custom/triggers/index.md) a workflow to be executed. 
 
