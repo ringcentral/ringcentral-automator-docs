@@ -53,6 +53,7 @@ plugins:
       regex:
         - '^#.*'
         - 'inc/templates.md'
+  - print-site
 
 
 markdown_extensions:
