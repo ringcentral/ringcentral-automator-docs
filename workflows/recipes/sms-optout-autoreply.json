@@ -1,0 +1,405 @@
+{
+  "name": "SMS opt-in/opt-out auto-reply",
+  "nodes": [
+    {
+      "id": "trigger",
+      "position": {
+        "x": 250,
+        "y": 75
+      },
+      "type": "trigger",
+      "data": {
+        "description": "",
+        "rules": [],
+        "label": "SMS received",
+        "type": "newSMS",
+        "nextNodes": [
+          "condition-opt-out-keywords"
+        ],
+        "matchType": "or"
+      }
+    },
+    {
+      "id": "condition-opt-out-keywords",
+      "position": {
+        "x": 250,
+        "y": 225
+      },
+      "type": "condition",
+      "data": {
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-sms-opt-out"
+        ],
+        "matchType": "or",
+        "parentNodeId": "trigger",
+        "rules": [
+          {
+            "input": "trigger.message",
+            "condition": "isContains",
+            "id": 0,
+            "value": "stop"
+          },
+          {
+            "input": "trigger.message",
+            "condition": "isContains",
+            "id": 1,
+            "value": "unsubscribe"
+          }
+        ],
+        "label": "Opt-out keywords",
+        "falsyNodes": [
+          "condition-opt-in-keywords"
+        ]
+      }
+    },
+    {
+      "id": "action-sms-opt-out",
+      "position": {
+        "x": -50,
+        "y": 425
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"messageText\":\"$$PARAM$$\",\"fromPhoneNumber\":\"{trigger.recipient.phoneNumber}\",\"toPhoneNumbers\":[{\"phoneNumber\":\"{trigger.sender.phoneNumber}\"}]}",
+        "parentNodeId": "condition-opt-out-keywords",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-lookup-contact-opt-out"
+        ]
+      }
+    },
+    {
+      "id": "action-lookup-contact-opt-out",
+      "position": {
+        "x": -50,
+        "y": 625
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"phoneNumber\":\"{trigger.sender.phoneNumber}\"}",
+        "parentNodeId": "action-sms-opt-out",
+        "label": "Lookup contact",
+        "type": "lookupContact",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "condition-contact-found-opt-out"
+        ]
+      }
+    },
+    {
+      "id": "condition-contact-found-opt-out",
+      "position": {
+        "x": -50,
+        "y": 825
+      },
+      "type": "condition",
+      "data": {
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-update-contact-opt-out"
+        ],
+        "matchType": "and",
+        "parentNodeId": "action-lookup-contact-opt-out",
+        "rules": [
+          {
+            "input": "action.isPersonalContact",
+            "condition": "isTrue",
+            "id": 0,
+            "value": ""
+          }
+        ],
+        "label": "Contact found",
+        "falsyNodes": [
+          "action-create-contact-opt-out"
+        ]
+      }
+    },
+    {
+      "id": "action-update-contact-opt-out",
+      "position": {
+        "x": -250,
+        "y": 1025
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"notes\":\"{action.contactNotes}\\nThis person unsubscribed to SMS messages on {trigger.receivedDate}\",\"contactId\":\"{action.contactId}\",\"phoneNumberLabel\":\"businessPhone\"}",
+        "parentNodeId": "condition-contact-found-opt-out",
+        "label": "Update contact",
+        "type": "updateContact",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-opt-out-1"
+        ]
+      }
+    },
+    {
+      "id": "action-create-contact-opt-out",
+      "position": {
+        "x": 150,
+        "y": 1025
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"firstName\":\"{trigger.sender.phoneNumber}\",\"phoneNumber\":\"{trigger.sender.phoneNumber}\",\"phoneNumberLabel\":\"businessPhone\",\"notes\":\"This person unsubscribed to SMS messages on {trigger.receivedDate}\"}",
+        "parentNodeId": "condition-contact-found-opt-out",
+        "label": "Create contact",
+        "type": "createContact",
+        "parentNodeBranch": "false",
+        "nextNodes": [
+          "action-exit-opt-out-2"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-opt-out-1",
+      "position": {
+        "x": -250,
+        "y": 1225
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-update-contact-opt-out",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    },
+    {
+      "id": "action-exit-opt-out-2",
+      "position": {
+        "x": 150,
+        "y": 1225
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-create-contact-opt-out",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    },
+    {
+      "id": "condition-opt-in-keywords",
+      "position": {
+        "x": 550,
+        "y": 425
+      },
+      "type": "condition",
+      "data": {
+        "parentNodeBranch": "false",
+        "nextNodes": [
+          "action-sms-opt-in"
+        ],
+        "matchType": "or",
+        "description": "",
+        "parentNodeId": "condition-opt-out-keywords",
+        "rules": [
+          {
+            "input": "trigger.message",
+            "condition": "isContains",
+            "id": 0,
+            "value": "start"
+          },
+          {
+            "input": "trigger.message",
+            "condition": "isContains",
+            "id": 1,
+            "value": "subscribe"
+          },
+          {
+            "input": "trigger.message",
+            "condition": "isContains",
+            "id": 2,
+            "value": "resubscribe"
+          }
+        ],
+        "label": "Opt-in keywords",
+        "falsyNodes": [
+          "action-exit-1"
+        ]
+      }
+    },
+    {
+      "id": "action-sms-opt-in",
+      "position": {
+        "x": 750,
+        "y": 625
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"messageText\":\"$$PARAM$$\",\"fromPhoneNumber\":\"{trigger.recipient.phoneNumber}\",\"toPhoneNumbers\":[{\"phoneNumber\":\"{trigger.sender.phoneNumber}\"}]}",
+        "parentNodeId": "condition-opt-in-keywords",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-lookup-contact-opt-in"
+        ]
+      }
+    },
+    {
+      "id": "action-lookup-contact-opt-in",
+      "position": {
+        "x": 750,
+        "y": 825
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"phoneNumber\":\"{trigger.sender.phoneNumber}\"}",
+        "parentNodeId": "action-sms-opt-in",
+        "label": "Lookup contact",
+        "type": "lookupContact",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "condition-contact-found-opt-in"
+        ]
+      }
+    },
+    {
+      "id": "condition-contact-found-opt-in",
+      "position": {
+        "x": 750,
+        "y": 1025
+      },
+      "type": "condition",
+      "data": {
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-update-contact-opt-in"
+        ],
+        "matchType": "and",
+        "parentNodeId": "action-lookup-contact-opt-in",
+        "rules": [
+          {
+            "input": "action.isPersonalContact",
+            "condition": "isTrue",
+            "id": 0,
+            "value": ""
+          }
+        ],
+        "label": "Contact found",
+        "falsyNodes": [
+          "action-create-contact-opt-in"
+        ]
+      }
+    },
+    {
+      "id": "action-update-contact-opt-in",
+      "position": {
+        "x": 550,
+        "y": 1225
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"notes\":\"{action.contactNotes}\\nThis person re-subscribed to SMS messages on {trigger.receivedDate}\",\"contactId\":\"{action.contactId}\",\"phoneNumberLabel\":\"businessPhone\"}",
+        "parentNodeId": "condition-contact-found-opt-in",
+        "label": "Update contact",
+        "type": "updateContact",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-opt-in-1"
+        ]
+      }
+    },
+    {
+      "id": "action-create-contact-opt-in",
+      "position": {
+        "x": 950,
+        "y": 1225
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"firstName\":\"{trigger.sender.phoneNumber}\",\"phoneNumber\":\"{trigger.sender.phoneNumber}\",\"phoneNumberLabel\":\"businessPhone\",\"notes\":\"This person re-subscribed to SMS messages on {trigger.receivedDate}\"}",
+        "parentNodeId": "condition-contact-found-opt-in",
+        "label": "Create contact",
+        "type": "createContact",
+        "parentNodeBranch": "false",
+        "nextNodes": [
+          "action-exit-opt-in-2"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-opt-in-1",
+      "position": {
+        "x": 550,
+        "y": 1425
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-update-contact-opt-in",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    },
+    {
+      "id": "action-exit-opt-in-2",
+      "position": {
+        "x": 950,
+        "y": 1425
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-create-contact-opt-in",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    },
+    {
+      "id": "action-exit-1",
+      "position": {
+        "x": 350,
+        "y": 625
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "condition-opt-in-keywords",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "false",
+        "nextNodes": []
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "action-params-action-sms-opt-out-messageText",
+      "name": "SMS opt-out auto-reply",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-sms-opt-out",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    },
+    {
+      "id": "action-params-action-sms-opt-in-messageText",
+      "name": "SMS opt-in auto-reply",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-sms-opt-in",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    }
+  ],
+  "version": 1
+}

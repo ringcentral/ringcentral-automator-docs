@@ -1,0 +1,157 @@
+{
+  "name": "Missed call auto-response",
+  "nodes": [
+    {
+      "id": "trigger",
+      "position": {
+        "x": 280,
+        "y": 20
+      },
+      "type": "trigger",
+      "data": {
+        "limitation": {
+          "count": 1,
+          "interval": "hour"
+        },
+        "nextNodes": [
+          "condition-1"
+        ],
+        "matchType": "or",
+        "description": "",
+        "rules": [],
+        "label": "Call missed",
+        "type": "callMissed"
+      }
+    },
+    {
+      "id": "condition-1",
+      "position": {
+        "x": 280,
+        "y": 184
+      },
+      "type": "condition",
+      "data": {
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-comment"
+        ],
+        "matchType": "and",
+        "description": "",
+        "parentNodeId": "trigger",
+        "rules": [
+          {
+            "input": "trigger.caller.phoneNumber",
+            "condition": "isExtensionNumber",
+            "id": 1,
+            "value": ""
+          }
+        ],
+        "label": "Is extension number",
+        "falsyNodes": [
+          "action-sms"
+        ]
+      }
+    },
+    {
+      "id": "action-sms",
+      "position": {
+        "x": 500,
+        "y": 381
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"messageText\":\"$$PARAM$$\",\"fromPhoneNumber\":\"$$PARAM$$\",\"toPhoneNumbers\":[{\"phoneNumber\":\"{trigger.caller.phoneNumber}\"}]}",
+        "parentNodeId": "condition-1",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "false",
+        "nextNodes": [
+          "action-exit-1"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-1",
+      "position": {
+        "x": 500,
+        "y": 549
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-sms",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    },
+    {
+      "id": "action-comment",
+      "position": {
+        "x": 90,
+        "y": 381
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"comment\":\"no SMS message was sent as a result of the call being from an internal number.\"}",
+        "parentNodeId": "condition-1",
+        "label": "Add comment",
+        "type": "comment",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-2"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-2",
+      "position": {
+        "x": 90,
+        "y": 562
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-comment",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "action-params-action-sms-fromPhoneNumber",
+      "name": "Select the phone number your SMS will be sent from",
+      "type": "option",
+      "options": [],
+      "remote": true,
+      "remoteOptionKey": "fromPhoneNumbers",
+      "validator": "^\\+[1-9]\\d{1,14}$",
+      "noOptionsMessage": "noSMSPermission",
+      "supportedVariables": [
+        "trigger.recipient.phoneNumber"
+      ],
+      "supportedVariablesForTrigger": "newSMS",
+      "nodeId": "action-sms",
+      "nodeLabel": "Send SMS",
+      "paramId": "fromPhoneNumber",
+      "forAction": "sendSMS"
+    },
+    {
+      "id": "action-params-action-sms-messageText",
+      "name": "Enter your auto-reply's message text",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-sms",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    }
+  ],
+  "version": 1
+}

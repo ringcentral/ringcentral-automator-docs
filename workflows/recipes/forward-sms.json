@@ -1,0 +1,85 @@
+{
+  "name": "Forward all SMS",
+  "desc": "This workflow forwards all SMS sent to one phone number to another phone number. ",
+  "nodes": [
+    {
+      "id": "trigger",
+      "type": "trigger",
+      "data": {
+        "label": "SMS received",
+        "type": "newSMS",
+        "nextNodes": [
+          "action-1770758069092"
+        ],
+        "matchType": "and",
+        "rules": []
+      },
+      "position": {
+        "x": 0,
+        "y": 52
+      }
+    },
+    {
+      "id": "action-1770758069092",
+      "type": "action",
+      "data": {
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parameterValues": {
+          "fromPhoneNumber": "{trigger.recipient.phoneNumber}",
+          "toPhoneNumbers": [
+            {
+              "phoneNumber": "$$PARAM$$"
+            }
+          ],
+          "messageText": "{user.firstName} has forwarded you an SMS from {trigger.sender.phoneNumber}:\n{trigger.message}"
+        },
+        "nextNodes": [
+          "action-exit-1770757974817"
+        ],
+        "outputVariables": [],
+        "customParameters": [],
+        "parentNodeId": "trigger",
+        "parentNodeBranch": "default",
+        "paramValues": "{\"fromPhoneNumber\":\"{trigger.recipient.phoneNumber}\",\"toPhoneNumbers\":[{\"phoneNumber\":\"$$PARAM$$\"}],\"messageText\":\"{user.firstName} has forwarded you an SMS from {trigger.sender.phoneNumber}:\\n{trigger.message}\"}"
+      },
+      "position": {
+        "x": 0,
+        "y": 200
+      }
+    },
+    {
+      "id": "action-exit-1770757974817",
+      "type": "action",
+      "data": {
+        "label": "End of flow",
+        "type": "exit",
+        "parameterValues": {},
+        "nextNodes": [],
+        "parentNodeId": "action-1770758069092",
+        "parentNodeBranch": "default"
+      },
+      "position": {
+        "x": 0,
+        "y": 348
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "action-params-action-1770758069092-toPhoneNumbers-0-phoneNumber",
+      "name": "Forward SMS to (phone number)",
+      "type": "PHONE_NUMBER",
+      "placeholder": "Select or enter a phone number",
+      "validationErrorMessage": "Invalid phone number format. Please use a valid format, such as +1 123-456-7890 or 123-456-7890.",
+      "nodeId": "action-1770758069092",
+      "nodeLabel": "Send SMS",
+      "paramId": "toPhoneNumbers",
+      "itemIndex": 0,
+      "propertyId": "phoneNumber",
+      "propertyName": "SMS sent to",
+      "forAction": "sendSMS"
+    }
+  ],
+  "version": 1
+}

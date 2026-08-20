@@ -1,0 +1,90 @@
+{
+  "name": "SMS sent when call received",
+  "nodes": [
+    {
+      "id": "trigger",
+      "position": {
+        "x": 250,
+        "y": 80
+      },
+      "type": "trigger",
+      "data": {
+        "description": "",
+        "rules": [],
+        "label": "Call received",
+        "type": "callReceived",
+        "nextNodes": [
+          "action-1717500598278"
+        ],
+        "matchType": "and"
+      }
+    },
+    {
+      "id": "action-1717500598278",
+      "position": {
+        "x": 250,
+        "y": 280
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"toPhoneNumbers\":[{\"phoneNumber\":\"{trigger.caller.phoneNumber}\"}],\"fromPhoneNumber\":\"$$PARAM$$\",\"messageText\":\"$$PARAM$$\"}",
+        "parentNodeId": "trigger",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-1717500488442"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-1717500488442",
+      "position": {
+        "x": 250,
+        "y": 480
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-1717500598278",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "action-params-action-1717500598278-fromPhoneNumber",
+      "name": "Select the phone number your SMS will be sent from",
+      "type": "option",
+      "options": [],
+      "remote": true,
+      "remoteOptionKey": "fromPhoneNumbers",
+      "validator": "^\\+[1-9]\\d{1,14}$",
+      "noOptionsMessage": "noSMSPermission",
+      "supportedVariables": [
+        "trigger.recipient.phoneNumber"
+      ],
+      "supportedVariablesForTrigger": "newSMS",
+      "nodeId": "action-1717500598278",
+      "nodeLabel": "Send SMS",
+      "paramId": "fromPhoneNumber",
+      "forAction": "sendSMS"
+    },
+    {
+      "id": "action-params-action-1717500598278-messageText",
+      "name": "Enter your SMS message text",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-1717500598278",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    }
+  ],
+  "version": 1
+}

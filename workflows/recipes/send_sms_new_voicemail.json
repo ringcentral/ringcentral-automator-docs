@@ -1,0 +1,151 @@
+{
+  "name": "Send SMSs on New Voicemail Recipe",
+  "nodes": [
+    {
+      "id": "trigger",
+      "position": {
+        "x": 250,
+        "y": 80
+      },
+      "type": "trigger",
+      "data": {
+        "description": "",
+        "rules": [],
+        "label": "Voicemail received",
+        "type": "newVoicemail",
+        "nextNodes": [
+          "action-1704316260176"
+        ],
+        "matchType": "and"
+      }
+    },
+    {
+      "id": "action-1704316260176",
+      "position": {
+        "x": 250,
+        "y": 275
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"toPhoneNumbers\":[{\"phoneNumber\":\"{trigger.sender.phoneNumber}\"}],\"fromPhoneNumber\":\"$$PARAM$$\",\"messageText\":\"$$PARAM$$\"}",
+        "parentNodeId": "trigger",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-1704316525893"
+        ]
+      }
+    },
+    {
+      "id": "action-1704316525893",
+      "position": {
+        "x": 700,
+        "y": 275
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"toPhoneNumbers\":[{\"phoneNumber\":\"$$PARAM$$\"}],\"fromPhoneNumber\":\"$$PARAM$$\",\"messageText\":\"$$PARAM$$\"}",
+        "parentNodeId": "action-1704316260176",
+        "label": "Send SMS",
+        "type": "sendSMS",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-1704314382750"
+        ]
+      }
+    },
+    {
+      "id": "action-exit-1704314382750",
+      "position": {
+        "x": 450,
+        "y": 475
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "action-1704316525893",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "action-params-action-1704316260176-fromPhoneNumber",
+      "name": "phone number the SMS will be sent from",
+      "type": "option",
+      "options": [],
+      "remote": true,
+      "remoteOptionKey": "fromPhoneNumbers",
+      "validator": "^\\+[1-9]\\d{1,14}$",
+      "noOptionsMessage": "noSMSPermission",
+      "supportedVariables": [
+        "trigger.recipient.phoneNumber"
+      ],
+      "supportedVariablesForTrigger": "newSMS",
+      "nodeId": "action-1704316260176",
+      "nodeLabel": "Send SMS",
+      "paramId": "fromPhoneNumber",
+      "forAction": "sendSMS"
+    },
+    {
+      "id": "action-params-action-1704316260176-messageText",
+      "name": "[Sample SMS text] Hi ﻿{trigger.sender.name}﻿, thank you for your voice message, I will listen to it and respond  to you as soon as I can.",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-1704316260176",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    },
+    {
+      "id": "action-params-action-1704316525893-fromPhoneNumber",
+      "name": "phone number the SMS will be sent from",
+      "type": "option",
+      "options": [],
+      "remote": true,
+      "remoteOptionKey": "fromPhoneNumbers",
+      "validator": "^\\+[1-9]\\d{1,14}$",
+      "noOptionsMessage": "noSMSPermission",
+      "supportedVariables": [
+        "trigger.recipient.phoneNumber"
+      ],
+      "supportedVariablesForTrigger": "newSMS",
+      "nodeId": "action-1704316525893",
+      "nodeLabel": "Send SMS",
+      "paramId": "fromPhoneNumber",
+      "forAction": "sendSMS"
+    },
+    {
+      "id": "action-params-action-1704316525893-toPhoneNumbers-0-phoneNumber",
+      "name": "Phone number where you want your own SMS message sent to",
+      "type": "phoneNumber",
+      "validator": "^\\+[1-9]\\d{1,14}$",
+      "placeholder": "Input or select a phone number",
+      "nodeId": "action-1704316525893",
+      "nodeLabel": "Send SMS",
+      "paramId": "toPhoneNumbers",
+      "itemIndex": 0,
+      "propertyId": "phoneNumber",
+      "forAction": "sendSMS"
+    },
+    {
+      "id": "action-params-action-1704316525893-messageText",
+      "name": "[Sample SMS text] You just received a new voice mail from ﻿{trigger.sender.name}﻿ at ﻿{trigger.sender.phoneNumber}﻿ . You have been informed!",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "nodeId": "action-1704316525893",
+      "nodeLabel": "Send SMS",
+      "paramId": "messageText",
+      "forAction": "sendSMS",
+      "requiredActionOutputs": []
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,19 @@
+# Using variables in an automation
+
+## Types of variables
+
+Variables are sometimes divided into different categories to facilitate selecting, finding and referencing the correct one within your automation. These categories include:
+
+### Trigger variables
+
+These are the primary set of variables users will interact with. They refer to the variables that contain information that accompanied the event that triggered, or initiated the execution of the automation. For triggers relating to SMS messages for example, this may include the phone number that sent the SMS, or received the SMS, or the SMS message itself. Each [trigger](../triggers/) inserts its own set of variables into the current automation's context. 
+
+### Action output variables
+
+These variables are not present when the automation is first executed, but are instead added to the automation as the result of executing an action. It can sometimes be helpful to think of these variables as an actions *output*. 
+
+### User variables
+
+## Referencing variables
+
+## Manipulating variables

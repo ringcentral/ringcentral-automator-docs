@@ -1,0 +1,356 @@
+{
+  "name": "Glip OOO auto-reply",
+  "nodes": [
+    {
+      "id": "trigger",
+      "position": {
+        "x": 400,
+        "y": -150
+      },
+      "data": {
+        "limitation": {
+          "count": 1,
+          "interval": "day"
+        },
+        "nextNodes": [
+          "condition-1703114297440"
+        ],
+        "matchType": "and",
+        "description": "",
+        "rules": [
+          {
+            "input": "trigger.receivedDate",
+            "condition": "isAfterOrEqualDate",
+            "id": 1703114143168,
+            "value": "$$PARAM$$",
+            "inputGroup": "trigger"
+          },
+          {
+            "input": "trigger.receivedDate",
+            "condition": "isBeforeOrEqualDate",
+            "id": 1703114156029,
+            "value": "$$PARAM$$",
+            "inputGroup": "trigger"
+          },
+          {
+            "id": 1703115695036,
+            "inputGroup": "trigger",
+            "input": "trigger.chatType",
+            "condition": "isNoEqual",
+            "value": "Personal"
+          }
+        ],
+        "label": "Chat message received",
+        "type": "newTeamMessaging"
+      },
+      "type": "trigger"
+    },
+    {
+      "id": "condition-1703114297440",
+      "position": {
+        "x": 400,
+        "y": 50
+      },
+      "type": "condition",
+      "data": {
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-1703114488810"
+        ],
+        "matchType": "or",
+        "description": "",
+        "parentNodeId": "trigger",
+        "rules": [
+          {
+            "input": "trigger.mentionMe",
+            "condition": "isTrue",
+            "id": 1703114277970,
+            "value": ""
+          },
+          {
+            "input": "trigger.chatType",
+            "condition": "isEqual",
+            "id": 1703114288823,
+            "value": "Direct"
+          }
+        ],
+        "label": "Am I the recipient of the message?",
+        "falsyNodes": [
+          "blank-false-1703114297440"
+        ]
+      }
+    },
+    {
+      "id": "action-1703114488810",
+      "position": {
+        "x": 200,
+        "y": 250
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{\"conversationId\":\"{trigger.chatId}\",\"messageText\":\"$$PARAM$$\"}",
+        "parentNodeId": "condition-1703114297440",
+        "label": "Send chat message",
+        "type": "sendTeamMessage",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "condition-1703115334808"
+        ]
+      }
+    },
+    {
+      "id": "condition-1703115334808",
+      "type": "condition",
+      "data": {
+        "label": "Is chat type direct?",
+        "parentNodeId": "action-1703114488810",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-1703115373850"
+        ],
+        "falsyNodes": [
+          "action-1703115388445"
+        ],
+        "rules": [
+          {
+            "id": 1703115300563,
+            "inputGroup": "trigger",
+            "input": "trigger.chatType",
+            "condition": "isEqual",
+            "value": "Direct"
+          }
+        ],
+        "matchType": "and",
+        "description": ""
+      },
+      "position": {
+        "x": 200,
+        "y": 450
+      }
+    },
+    {
+      "id": "action-1703115373850",
+      "type": "action",
+      "data": {
+        "label": "Send chat message",
+        "parentNodeId": "condition-1703115334808",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "blank-true-1703115334808"
+        ],
+        "type": "sendTeamMessage",
+        "paramValues": "{\"conversationId\":\"$$PARAM$$\",\"messageText\":\"You received a message from ![:Person]({trigger.creatorId}) on {trigger.receivedDate}  {trigger.receivedTime}:\\n> {trigger.message}\"}"
+      },
+      "position": {
+        "x": 0,
+        "y": 650
+      }
+    },
+    {
+      "id": "blank-true-1703115334808",
+      "type": "blank",
+      "data": {
+        "parentNodeId": "action-1703115373850",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "blank-next-1703115334808"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 850
+      }
+    },
+    {
+      "id": "blank-next-1703115334808",
+      "type": "blank",
+      "data": {
+        "parentNodeId": "blank-true-1703115334808",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "blank-true-1703114297440"
+        ],
+        "parentNodes": [
+          {
+            "id": "blank-true-1703115334808",
+            "branch": "default"
+          },
+          {
+            "id": "blank-false-1703115334808",
+            "branch": "default"
+          }
+        ]
+      },
+      "position": {
+        "x": 200,
+        "y": 1250
+      }
+    },
+    {
+      "id": "blank-true-1703114297440",
+      "position": {
+        "x": 200,
+        "y": 1400
+      },
+      "type": "blank",
+      "data": {
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "blank-next-1703114297440"
+        ],
+        "parentNodeId": "blank-next-1703115334808"
+      }
+    },
+    {
+      "id": "blank-next-1703114297440",
+      "position": {
+        "x": 400,
+        "y": 1600
+      },
+      "type": "blank",
+      "data": {
+        "parentNodeId": "blank-true-1703114297440",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "action-exit-1703114265154"
+        ],
+        "parentNodes": [
+          {
+            "branch": "default",
+            "id": "blank-true-1703114297440"
+          },
+          {
+            "branch": "default",
+            "id": "blank-false-1703114297440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "action-exit-1703114265154",
+      "position": {
+        "x": 400,
+        "y": 1725
+      },
+      "type": "action",
+      "data": {
+        "paramValues": "{}",
+        "parentNodeId": "blank-next-1703114297440",
+        "label": "Exit",
+        "type": "exit",
+        "parentNodeBranch": "default",
+        "nextNodes": []
+      }
+    },
+    {
+      "id": "action-1703115388445",
+      "type": "action",
+      "data": {
+        "label": "Send chat message",
+        "parentNodeId": "condition-1703115334808",
+        "parentNodeBranch": "false",
+        "nextNodes": [
+          "blank-false-1703115334808"
+        ],
+        "type": "sendTeamMessage",
+        "paramValues": "{\"conversationId\":\"$$PARAM$$\",\"messageText\":\"You received a message in [{trigger.chatName}](https://app.ringcentral.com/l/messages/{trigger.chatId}) on {trigger.receivedDate}  {trigger.receivedTime} from ![:Person]({trigger.creatorId}):\\n> {trigger.message}\"}"
+      },
+      "position": {
+        "x": 400,
+        "y": 650
+      }
+    },
+    {
+      "id": "blank-false-1703115334808",
+      "type": "blank",
+      "data": {
+        "parentNodeId": "action-1703115388445",
+        "parentNodeBranch": "default",
+        "nextNodes": [
+          "blank-next-1703115334808"
+        ]
+      },
+      "position": {
+        "x": 400,
+        "y": 850
+      }
+    },
+    {
+      "id": "blank-false-1703114297440",
+      "position": {
+        "x": 600,
+        "y": 250
+      },
+      "type": "blank",
+      "data": {
+        "parentNodeBranch": "false",
+        "nextNodes": [
+          "blank-next-1703114297440"
+        ],
+        "parentNodeId": "condition-1703114297440"
+      }
+    }
+  ],
+  "params": [
+    {
+      "id": "condition-rules-trigger-1703114143168",
+      "name": "Start date",
+      "type": "date",
+      "nodeId": "trigger",
+      "nodeLabel": "Chat message received",
+      "ruleId": 1703114143168,
+      "noVariable": true
+    },
+    {
+      "id": "condition-rules-trigger-1703114156029",
+      "name": "End date",
+      "type": "date",
+      "nodeId": "trigger",
+      "nodeLabel": "Chat message received",
+      "ruleId": 1703114156029,
+      "noVariable": true
+    },
+    {
+      "id": "action-params-action-1703114488810-messageText",
+      "name": "Auto-reply message",
+      "type": "text",
+      "limitLength": 500,
+      "helperText": "Tip: type \"#\" to see a list of variables you can insert into the message",
+      "placeholder": "Enter your message here",
+      "nodeId": "action-1703114488810",
+      "nodeLabel": "Send chat message",
+      "paramId": "messageText",
+      "forAction": "sendTeamMessage",
+      "requiredActionOutputs": []
+    },
+    {
+      "id": "action-params-action-1703115373850-conversationId",
+      "name": "Your personal chat ID",
+      "type": "string",
+      "validator": "^[0-9]+$",
+      "remote": true,
+      "remoteOptionKey": "conversations",
+      "suggestions": [],
+      "autoComplete": true,
+      "nodeId": "action-1703115373850",
+      "nodeLabel": "Send chat message",
+      "paramId": "conversationId",
+      "forAction": "sendTeamMessage"
+    },
+    {
+      "id": "action-params-action-1703115388445-conversationId",
+      "name": "Your personal chat ID (yes, enter it again)",
+      "type": "string",
+      "validator": "^[0-9]+$",
+      "remote": true,
+      "remoteOptionKey": "conversations",
+      "suggestions": [],
+      "autoComplete": true,
+      "nodeId": "action-1703115388445",
+      "nodeLabel": "Send chat message",
+      "paramId": "conversationId",
+      "forAction": "sendTeamMessage"
+    }
+  ],
+  "version": 1
+}
