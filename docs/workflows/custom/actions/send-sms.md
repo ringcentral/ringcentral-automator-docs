@@ -12,7 +12,7 @@ Sends text via SMS from one phone number, to another phone number. When using th
 * one's ability to send an SMS depends upon an administrator setting up their account properly to send SMS after having gone through the TCR process of registering campaigns and so forth
 
 !!! info "Enabling SMS for your account"
-    If you are having difficulty sending SMS from your account, or if you see the following message when editing a "Send SMS" action node, then please consult our [knowledge base and community](https://community.ringcentral.com/groups/workflow-builder-23) to help diagnose the root cause.
+    If you are having difficulty sending SMS from your account, or if you see the following message when editing a "Send SMS" action node, then please consult our [knowledge base and community](https://community.ringcentral.com/workflow-builder-38?) to help diagnose the root cause.
 	
     > You are not permitted to send SMS messages because your phone number is not yet setup for SMS. To resolve this problem please consult our help documentation.
 
@@ -27,4 +27,3 @@ Sends text via SMS from one phone number, to another phone number. When using th
 ## Output
 
 None. 
-

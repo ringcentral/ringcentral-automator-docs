@@ -89,30 +89,40 @@
 }
 
 .md-banner {
+    /* The RingCentral theme supplies the dark banner background. */
     text-align: center;
     font-weight: bold;
-    background-color: rgb(255, 122, 0);
 }
 .md-banner .upgrade-button {
     display: inline-block;
     border-radius: 20px;
     padding: 3px 10px;
-    background: white;
+    background: #FF7A00;
     margin-left: 10px;
 }
-.md-banner .md-typeset .learn-more {
-    color: white;
-    padding-left: 10px;
-} 
+.md-banner .upgrade-button a {
+    color: #ffffff !important;
+}
 .md-banner .md-typeset a {
-    color: rgb(122, 36, 0);
+    color: #FFB347;
+    text-decoration: underline;
+}
+.md-banner .md-typeset a:hover {
+    color: #066fac;
 }
 .md-typeset a {
-    color: #066fac
+    color: #066fac;
 }
 .md-typeset a:hover {
     color: #066fac;
     text-decoration: underline;
+}
+
+.md-search__input {
+    color: #000 !important;
+}
+.md-search__input::placeholder {
+    color: rgba(0, 0, 0, 0.45) !important;
 }
 
 .flows .icon-node,

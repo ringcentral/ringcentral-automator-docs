@@ -1,4 +1,4 @@
-## Embedding variables or performing text substitution in SMS messages
+# Embedding variables or performing text substitution in SMS messages
 
 ![inserting variables into textbox](../img/message-variables.png){ style="max-width: 250px; float: right; margin-left: 20px;" }
 
@@ -9,4 +9,3 @@ One can easily personalize or customize the contents of any text field in Workfl
 Keeping track of all the variables might be tough. So, in any text box, type the hashtag/pound character, `#`, and a pull-down menu will appear allowing you to select the varibable to insert. 
 
 The variables available to you depend upon the trigger your workflow is using, as well as any actions that might have preceeded the one you are editing. For a complete list of all variables, and their meaning, consult the [actions](../workflows/custom/actions/index.md) and [triggers](../workflows/custom/triggers/index.md) in your specific workflow. 
-
